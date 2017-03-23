@@ -2,7 +2,9 @@ AppBuilder - Visualize, template and deploy your app in a second.
 ============
 
 AppBuilder is the fastest way to deploy your mobile app to any server without configuration or environment constraints it only uses html.
-Currently used in our toolchain in production environment with a Jenkins providing an ipa build with fastlane/gym.
+
+## Usage
+Currently used in our production toolchain with a Jenkins building the app with gym (fastlane) and AppBuilder is generating the download page in script mode from the ipa file.
 
 ## Features
 - [x] Get quick info on your iOS and android App (support of .xcarchive, .ipa and .apk archive)
