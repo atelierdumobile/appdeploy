@@ -2,10 +2,9 @@ AppBuilder - Visualize, template and deploy your app in a second.
 ============
 
 AppBuilder is the fastest way to deploy your mobile app on any server from your Mac.
-Currently used in my toolchain in my production environment with a Jenkins and taking an ipa from gym.
+Currently used in our toolchain in production environment with a Jenkins providing an ipa build with fastlane/gym.
 
 ## Features
-
 - [x] Get quick info on your iOS and android App (support of .xcarchive, .ipa and .apk archive)
 - [x] iOS: Get fast access to your app ressource, and plist info
 - [x] iOS: Get notified when you did a build and allow to handle it
@@ -18,24 +17,23 @@ Currently used in my toolchain in my production environment with a Jenkins and t
 ## Download and installation
 Coming soon
 
-##Requirements
+## Requirements
 - OSX10.9
 
 ## Presentation
 
 #### Supported files
+
 Drag any apk, xcarchive, ipa
 
 ![Gifs](ReadmeData/SupportedFiles.gif)
 
 
 #### Choose the template you like
-
 ![Gifs](ReadmeData/AnyTemplateYouWant.gif)
 
 
 #### Deploy in a second
-
 ![Gifs](ReadmeData/ipa.gif)
 
 ![Gifs](ReadmeData/apk.gif)
@@ -50,8 +48,7 @@ Double check you archive information
 ![Png](ReadmeData/SettingsTerminal.png)
 
 
-## Improvments in mind (according to your feedbacks)
-
+## Improvments (feadback appreciated)
 
 General
 
@@ -104,10 +101,10 @@ Knowns bugs
 	- Going to settings cancel the current build upload
 
 
-##License
+## License
 TODO
 
-##Feature requests and feedback
+## Feature requests and feedback
 Ping me on [twitter](ReadmeData/http://twitter.com/nlauquin) or follow for updates.
 
 If you want to help me, tell me which usage you will use or like to do with this tool:
