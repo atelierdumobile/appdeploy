@@ -1,7 +1,7 @@
 AppBuilder - Visualize, template and deploy your app in a second.
 ============
 
-AppBuilder is the fastest way to deploy your mobile app on any server from your Mac.
+AppBuilder is the fastest way to deploy your mobile app to any server without configuration or environment constraints it only uses html.
 Currently used in our toolchain in production environment with a Jenkins providing an ipa build with fastlane/gym.
 
 ## Features
@@ -33,7 +33,7 @@ Drag any apk, xcarchive, ipa
 ![Gifs](ReadmeData/AnyTemplateYouWant.gif)
 
 
-#### Deploy in a second
+#### Deploy with a click
 ![Gifs](ReadmeData/ipa.gif)
 
 ![Gifs](ReadmeData/apk.gif)
@@ -57,19 +57,19 @@ General
 
 Display
 
-	- display more information such ressources sizes and repartition
-	- display validity of certificate
-	- MacApp support
+	- display more information such size of resources and repartition
+	- display validity of certificates
+	- .app MacApp support
 	- MultiWindow support
 	- Add a comment section
 
 Signing (iOS)
 
 	- Ipa : display more information about signing information
-	- xcarchvie : Weakness of the signing part due to certificate issue, and complexity build issue. Not sure it is the role of this tool.
+	- Xcarchvie : Weakness of the signing part due to certificate issue, and complexity build issue. Not sure it is the role of this tool.
 	- Resiging by choosing a certificate
 	- Upload Dsym
-	- Delegate signing to Fastlane if present
+	- Automatically delegate signing to Fastlane (gym) if present
 
 Network
 
@@ -81,16 +81,15 @@ Network
 
 Templating
 
-	- Better improvment of the template management
+	- Improvment of the template management
 	- Allow a template store to share its template
 
 Uploading
 
-	- cancel a build/upload
+	- Cancel a build/upload in progress
 
 Settings
 
-	- store password in keychain or encrypt them (sftp only)
 
 Notification
 
@@ -99,6 +98,7 @@ Notification
 Knowns bugs
 
 	- Going to settings cancel the current build upload
+	- ⚠️ Store password in keychain or encrypt them in the settings (sftp only, ssh mode is secured)  
 
 
 ## License
