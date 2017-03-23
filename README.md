@@ -1,4 +1,4 @@
-AppBuilder - Visualize, template and deploy your app in a second.
+AppBuilder - Visualize, templatize and deploy your app in a second.
 ============
 
 AppBuilder is the fastest way to deploy your mobile app to any server without configuration or environment constraints it only uses html.
@@ -8,12 +8,12 @@ Currently used in our production toolchain with a Jenkins building the app with 
 
 ## Features
 - [x] Get quick info on your iOS and android App (support of .xcarchive, .ipa and .apk archive)
-- [x] iOS: Get fast access to your app ressource, and plist info
+- [x] iOS: Get fast access to your app resource, and plist info
 - [x] iOS: Get notified when you did a build and allow to handle it
-- [x] Use default template (branded or with app icone) or create your own one with html
-- [x] Deploy on your server without extra configuration just html is required
-- [x] Usage in you CI by using it in command line
-- [x] Notify the build with success with Hipchat or Prowl
+- [x] Use default template (branded or with app icon) or customize your own one
+- [x] Deploy to your server without extra configuration just html support is required
+- [x] Notify build&deployment success with Hipchat or Prowl
+- [x] Integrate it in your Continuous Integration by using it in command line
 - [x] Download the app with a versionned url
 
 ## Download and installation
@@ -54,36 +54,36 @@ Double check you archive information
 
 General
 
-	- find another icone
-	- find a new name
+	- Find another icone
+	- Find a new name
 
 Display
 
-	- display more information such size of resources and repartition
-	- display validity of certificates
-	- .app MacApp support
+	- Display more information such size of resources and repartition
+	- Display validity of certificates
+	- Support MacApp
 	- MultiWindow support
 	- Add a comment section
 
 Signing (iOS)
 
 	- Ipa : display more information about signing information
-	- Xcarchvie : Weakness of the signing part due to certificate issue, and complexity build issue. Not sure it is the role of this tool.
+	- Xcarchive : Weakness of the signing part due to certificate issue, and complexity build issue. Not sure it is the role of this tool.
 	- Resiging by choosing a certificate
 	- Upload Dsym
 	- Automatically delegate signing to Fastlane (gym) if present
 
 Network
 
-	- Improvment of the network upload fiability
+	- Improvment of the network upload reliability
 	- Add cancel button
 	- SSH mode has no progress bar
 	- Dropbox support for sharing
-	- generate random url for privacy
+	- Generate random url for privacy
 
 Templating
 
-	- Improvment of the template management
+	- Improvement of the template management
 	- Allow a template store to share its template
 
 Uploading
@@ -95,7 +95,7 @@ Settings
 
 Notification
 
-	- slack support
+	- Slack support
 
 Knowns bugs
 
@@ -107,11 +107,11 @@ Knowns bugs
 TODO
 
 ## Feature requests and feedback
-Ping me on [twitter](ReadmeData/http://twitter.com/nlauquin) or follow for updates.
+Ping me on [twitter](http://twitter.com/nlauquin)
 
 If you want to help me, tell me which usage you will use or like to do with this tool:
 - 1/ Easy way to consult app
-- 2/ Integration in my toolchain (jenkins)
+- 2/ Integration in my toolchain (Jenkins)
 - 3/ Manual usage pour deploying app
 
 - Which part to remove/which to focus on?
