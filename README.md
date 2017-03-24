@@ -64,7 +64,7 @@ General
 
 Display
 
-	- Display more information such size of resources and repartition
+	- Display more information such as size of resources and repartition
 	- Display validity of certificates
 	- Support MacApp
 	- MultiWindow support
@@ -75,7 +75,7 @@ Signing (iOS)
 	- Ipa : display more information about signing information
 	- Xcarchive : Weakness of the signing part due to certificate issue and complexity of build. Not sure it is the role of this tool to handle it. Many different option possible.
 	- Display output of build/logs -> currently in the console
-	- Resiging by choosing a certificate
+	- Resiging by choosing a provisionning
 	- Upload Dsym
 	- Automatically delegate signing to Fastlane (gym) if present
 
@@ -116,7 +116,7 @@ TODO
 Ping me on [twitter](http://twitter.com/nlauquin)
 
 If you want to help me, tell me which usage you will use or like to do with this tool:
-- 1/ Easy way to consult app
+- 1/ Easy way to consult app technical details
 - 2/ Integration in my toolchain (Jenkins)
 - 3/ Manual usage pour deploying app
 
