@@ -98,10 +98,6 @@ Notification
 Knowns bugs or assimilated
 	- ⚠️ Store password in keychain or encrypt them in the settings (sftp only, ssh mode is secured)  
 
-
-## License
-TODO
-
 ## Feature requests and feedback
 Ping me on [twitter](http://twitter.com/nlauquin)
 
