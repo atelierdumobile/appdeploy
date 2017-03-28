@@ -20,7 +20,7 @@ Currently used in our production toolchain with a Jenkins building the app with 
 Coming soon
 
 ## Requirements
-- OSX10.9
+- OSX10.10
 
 ## Presentation
 
@@ -55,12 +55,7 @@ Discovers the settings and discovers the settings and possible customization.
 ![Png](ReadmeData/SettingsTerminal.png)
 
 
-## Improvements (feedback appreciated)
-
-General
-
-	- Find another icon
-	- Find a new name
+## Possible Improvements (feedback appreciated)
 
 Display
 
