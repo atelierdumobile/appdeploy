@@ -1,10 +1,10 @@
-AppBuilder - Visualize, templatize and deploy your app in a second.
+AppDeploy - Visualize, templatize and deploy your app in a second.
 ============
 
-AppBuilder is the fastest way to deploy your mobile app to any server without configuration or environment constraints it only uses html.
+AppDeploy is the fastest way to deploy your mobile app Over The Air without specific server configuration it only uses html.
 
 ## Usage
-Currently used in our production toolchain with a Jenkins building the app with gym (fastlane) and AppBuilder is generating the download page in script mode from the ipa file.
+Currently used in our production toolchain with a Jenkins building the app with gym (fastlane) and AppDeploy is generating the download page in script mode from the .ipa or .apk file.
 
 ## Features
 - [x] Get quick info on your iOS and android App (support of .xcarchive, .ipa and .apk archive)
@@ -46,12 +46,12 @@ APK:
 
 
 #### Full integration with Xcode archive
-Archive -> AppBuilder detecte the archive and allow you to handle it.
+Archive -> AppDeploy detects the archive and allow you to handle it.
 ![Gifs](ReadmeData/FullWorkflow.gif)
 
 
 #### Rich settings and options
-Discovers the settings and discovers the settings and possibile customization.
+Discovers the settings and discovers the settings and possible customization.
 ![Png](ReadmeData/SettingsTerminal.png)
 
 
@@ -65,14 +65,12 @@ General
 Display
 
 	- Display more information such as size of resources and repartition
-	- Display validity of certificates
-	- Support MacApp
+	- Support Mac application
 	- MultiWindow support
 	- Add a comment section
 
 Signing (iOS)
 
-	- Ipa : display more information about signing information
 	- Xcarchive : Weakness of the signing part due to certificate issue and complexity of build. Not sure it is the role of this tool to handle it. Many different option possible.
 	- Display output of build/logs -> currently in the console
 	- Resiging by choosing a provisionning
@@ -81,8 +79,7 @@ Signing (iOS)
 
 Network
 
-	- Improvment of the network upload reliability
-	- Add cancel button
+	- Improvement of the network upload reliability
 	- SSH mode has no progress bar
 	- Dropbox support for sharing
 	- Generate random url for privacy
@@ -104,8 +101,6 @@ Notification
 	- Slack support
 
 Knowns bugs or assimilated
-
-	- Going to settings cancel the current build upload
 	- ⚠️ Store password in keychain or encrypt them in the settings (sftp only, ssh mode is secured)  
 
 
