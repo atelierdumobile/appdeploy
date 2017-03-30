@@ -59,7 +59,7 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="iyY-Ss-Whk"/>
                 </imageView>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JgS-K9-JSc" userLabel="BackgroundArea">
-                    <rect key="frame" x="18" y="12" width="489" height="133"/>
+                    <rect key="frame" x="18" y="17" width="489" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="MhE-Tk-MU7"/>
                 </imageView>
@@ -76,6 +76,9 @@
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <outlet property="nextKeyView" destination="WJi-7I-zJW" id="wZl-4K-P3Z"/>
+                    </connections>
                 </textField>
                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WJi-7I-zJW" userLabel="Login TextField">
                     <rect key="frame" x="132" y="290" width="334" height="22"/>
@@ -87,6 +90,7 @@
                     </textFieldCell>
                     <connections>
                         <outlet property="delegate" destination="-2" id="Mfn-ck-QCk"/>
+                        <outlet property="nextKeyView" destination="eKI-JM-k5n" id="Dn4-cS-Rb5"/>
                     </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23F-wl-285" userLabel="Server Label">
@@ -129,6 +133,7 @@
                     </secureTextFieldCell>
                     <connections>
                         <outlet property="delegate" destination="-2" id="Pf8-aA-fvC"/>
+                        <outlet property="nextKeyView" destination="Fta-og-Jfd" id="Pju-DL-OHq"/>
                     </connections>
                 </secureTextField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ThU-d6-1PC">
@@ -152,6 +157,7 @@
                     </textFieldCell>
                     <connections>
                         <outlet property="delegate" destination="-2" id="pc0-W0-zAj"/>
+                        <outlet property="nextKeyView" destination="4ao-VM-iHy" id="qPN-CQ-QUE"/>
                     </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qob-uw-tS1" userLabel="Path Label">
@@ -173,6 +179,7 @@
                     </textFieldCell>
                     <connections>
                         <outlet property="delegate" destination="-2" id="diV-so-h58"/>
+                        <outlet property="nextKeyView" destination="GFj-hm-ZeK" id="9gB-T5-bo8"/>
                     </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dbx-w0-tzC" userLabel="Public download url Label">
@@ -242,6 +249,7 @@
                     </textFieldCell>
                     <connections>
                         <outlet property="delegate" destination="-2" id="Zeb-Ia-IRj"/>
+                        <outlet property="nextKeyView" destination="YIj-ev-5i1" id="Ugv-Do-peP"/>
                     </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFo-4h-ZaU" userLabel="Server Label">
@@ -263,7 +271,7 @@
                     </textFieldCell>
                 </textField>
                 <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="hOd-Za-wNM">
-                    <rect key="frame" x="474" y="202" width="16" height="16"/>
+                    <rect key="frame" x="474" y="201" width="16" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </progressIndicator>
                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVE-GW-sET">
@@ -296,7 +304,7 @@
                     </textFieldCell>
                 </textField>
                 <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iBx-yZ-6vH">
-                    <rect key="frame" x="474" y="352" width="25" height="25"/>
+                    <rect key="frame" x="474" y="350" width="25" height="25"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0kZ-Gf-otI">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -347,6 +355,7 @@
                     </textFieldCell>
                     <connections>
                         <outlet property="delegate" destination="-2" id="G4p-ah-tMX"/>
+                        <outlet property="nextKeyView" destination="N6y-Jd-t8F" id="YKO-Xw-ccI"/>
                     </connections>
                 </textField>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Fv-hK-tEd">

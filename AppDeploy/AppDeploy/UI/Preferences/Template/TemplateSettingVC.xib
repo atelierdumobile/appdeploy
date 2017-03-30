@@ -26,7 +26,7 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MO9-qX-IJV">
-                    <rect key="frame" x="18" y="343" width="443" height="26"/>
+                    <rect key="frame" x="18" y="343" width="453" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="lVj-IM-2mD">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -42,7 +42,7 @@
                     </popUpButtonCell>
                 </popUpButton>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gur-Cf-hof" userLabel="BackgroundArea">
-                    <rect key="frame" x="17" y="4" width="526" height="307"/>
+                    <rect key="frame" x="17" y="17" width="526" height="294"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="dag-ZN-ZcU"/>
                 </imageView>
@@ -67,6 +67,7 @@
                     </textFieldCell>
                     <connections>
                         <outlet property="delegate" destination="-2" id="q2y-r0-R9q"/>
+                        <outlet property="nextKeyView" destination="rtZ-D2-TNl" id="jVV-lL-dCO"/>
                     </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ge2-NM-lcO">
@@ -206,6 +207,9 @@
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <outlet property="nextKeyView" destination="BHa-fY-5XY" id="ggj-dH-o6W"/>
+                    </connections>
                 </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YDL-WZ-mFq">
                     <rect key="frame" x="487" y="346" width="21" height="21"/>
@@ -246,6 +250,9 @@
                     <buttonCell key="cell" type="push" title="Preview" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wtR-pP-9Sx">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
+                        <string key="keyEquivalent" base64-UTF8="YES">
+IA
+</string>
                     </buttonCell>
                     <connections>
                         <action selector="clickPreviewTemplate:" target="-2" id="x3V-RP-WjC"/>
@@ -261,6 +268,7 @@
                     </textFieldCell>
                     <connections>
                         <outlet property="delegate" destination="-2" id="S7E-1a-D99"/>
+                        <outlet property="nextKeyView" destination="5iv-p7-8ia" id="Z13-Ms-BxO"/>
                     </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vy8-Ki-ccu" userLabel="Server Label">

@@ -59,6 +59,7 @@
                             </dictionary>
                         </binding>
                         <outlet property="delegate" destination="-2" id="Uxf-2R-HOa"/>
+                        <outlet property="nextKeyView" destination="IMr-Fn-yCb" id="eDF-w4-L02"/>
                     </connections>
                 </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="umB-Ne-yae">
@@ -183,6 +184,7 @@
                             </dictionary>
                         </binding>
                         <outlet property="delegate" destination="-2" id="0HC-bn-vEN"/>
+                        <outlet property="nextKeyView" destination="ppf-nd-y2O" id="Lb9-0K-2m1"/>
                     </connections>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWN-6g-x3W">
