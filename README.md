@@ -61,6 +61,7 @@ Display
 
 	- Display more information such as size of resources and repartition
 	- Support Mac application
+	- Nicer display among supported plateform
 	- MultiWindow support
 	- Add a comment section
 
@@ -107,3 +108,8 @@ If you want to help me, tell me which usage you will use or like to do with this
 - 3/ Manual usage pour deploying app
 
 - Which part to remove/which to focus on?
+
+
+## License
+
+This project is licensed under the terms of the BSD license. See the [LICENSE](LICENSE) file.
