@@ -1,26 +1,27 @@
-AppDeploy - Visualize, templatize and deploy your app in a second.
+AppDeploy - Visualize, templatized and deploy your app in a second.
 ============
 
-AppDeploy is the fastest way to deploy your mobile app Over The Air without specific server configuration it only uses html.
-
-## Usage
-Currently used in our production toolchain with a Jenkins building the app with gym (fastlane) and AppDeploy is generating the download page in script mode from the .ipa or .apk file.
+AppDeploy is the fastest way to get info and deploy your mobile app Over The Air without specific server configuration (it only uses html).
 
 ## Features
-- [x] Get quick info on your iOS and android App (support of .xcarchive, .ipa and .apk archive)
-- [x] iOS: Get fast access to your app resource, and plist info
-- [x] iOS: Get notified when you did a build and allow to handle it
+- [x] Get quick info on your iOS and Android App (support of .xcarchive, .ipa and .apk archive)
+- [x] iOS: Get fast access to your app resources, plist, embbeded profiles…
+- [x] iOS: Get notified when you make an (xc)archive
 - [x] Use default template (branded or with app icon) or customize your own one
 - [x] Deploy to your server without extra configuration just html support is required
 - [x] Notify build&deployment success with Hipchat or Prowl
-- [x] Integrate it in your Continuous Integration by using it in command line
-- [x] Download the app with a versionned url
+- [x] Integrate it in your Continuous Integration by using the command line
+- [x] Download the app with a versioned url
+
+## Current usage
+- Currently used in our production toolchain with a Jenkins building the app with gym (fastlane) and AppDeploy is generating the download page in script mode from the .ipa or .apk file.
+- It is also nice to have info quickly on App by double clicking the files (requires to define AppDeploy as the default App to open your ipa/apk/xarchive files).
 
 ## Download and installation
-Coming soon
+You can build or download a ready to use version available [here](https://www.atelierdumobile.com/apps/releases/appdeploy)
 
 ## Requirements
-- OSX10.10
+- A mac with OSX10.10
 
 ## Presentation
 
@@ -35,15 +36,12 @@ You have default template and you can create the one that fits your needs.
 ![Gifs](ReadmeData/AnyTemplateYouWant.gif)
 
 
-#### Deploy with a click
+#### Deploy in a click
 Choose your template and network config and deploy.
 
-IPA:
 ![Gifs](ReadmeData/ipa.gif)
 
-APK:
 ![Gifs](ReadmeData/apk.gif)
-
 
 #### Full integration with Xcode archive
 Archive -> AppDeploy detects the archive and allow you to handle it.
@@ -97,7 +95,8 @@ Notification
 	- Slack support
 
 Knowns bugs or assimilated
-	- ⚠️ Store password in keychain or encrypt them in the settings (sftp only, ssh mode is secured)  
+
+	- ⚠️ Store SFTP password in keychain or encrypt them in the settings (ssh mode do not store pwd so is currently secured)  
 
 ## Feature requests and feedback
 Ping me on [twitter](http://twitter.com/nlauquin)
