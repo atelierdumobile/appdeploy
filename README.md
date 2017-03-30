@@ -103,8 +103,8 @@ Ping me on [twitter](http://twitter.com/nlauquin)
 
 If you want to help me, tell me which usage you will use or like to do with this tool:
 - 1/ Easy way to consult app technical details
-- 2/ Integration in my toolchain (Jenkins)
-- 3/ Manual usage pour deploying app
+- 2/ Integration in your toolchain (Jenkins)
+- 3/ Manual usage for templating and deploy app
 
 - Which part to remove/which to focus on?
 
