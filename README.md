@@ -18,7 +18,7 @@ AppDeploy is the fastest way to get info and deploy your mobile app Over The Air
 - It is also nice to have info quickly on App by double clicking the files (requires to define AppDeploy as the default App to open your ipa/apk/xarchive files).
 
 ## Download and installation
-You can build or download a ready to use version available [here](https://www.atelierdumobile.com/apps/releases/appdeploy)
+You can build or download a ready to use version available and stay automatically up to date thanks to Sparkle. [Download here](https://www.atelierdumobile.com/apps/releases/appdeploy)
 
 ## Requirements
 - A mac with OSX10.10
@@ -98,6 +98,8 @@ Knowns bugs or assimilated
 
 	- ⚠️ Store SFTP password in keychain or encrypt them in the settings (ssh mode do not store pwd so is currently secured)  
 
+	- clean code, put a CI & and unit test back
+
 ## Feature requests and feedback
 Ping me on [twitter](http://twitter.com/nlauquin)
 
@@ -105,7 +107,6 @@ If you want to help me, tell me which usage you will use or like to do with this
 - 1/ Easy way to consult app technical details
 - 2/ Integration in your toolchain (Jenkins)
 - 3/ Manual usage for templating and deploy app
-
 - Which part to remove/which to focus on?
 
 
