@@ -307,13 +307,13 @@
 }
 
 - (IBAction)deleteTemplateAction:(id)sender {
-	TemplateModel *  current = self.currentTemplate;
-	LoggerData(0, @"Will remove template at index %ld", self.templateList.indexOfSelectedItem);
+	//TemplateModel *  current = self.currentTemplate;
+	//LoggerData(0, @"Will remove template at index %ld", self.templateList.indexOfSelectedItem);
 	[[ConfigurationManager sharedManager].templateModels removeObjectAtIndex:self.templateList.indexOfSelectedItem];
 	self.currentTemplate = nil;
 	[self populateTemplateAndSelectFirstItem];
 	
-	LoggerConfig(1, @"Delete current template %@", current.label);
+	//LoggerConfig(1, @"Delete current template %@", current.label);
 }
 
 

@@ -1,6 +1,6 @@
 CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR/SBYZipArchive
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 $(inherited) USE_FILE32API=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/SBYZipArchive" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BBlock" "${PODS_ROOT}/Headers/Public/CDEvents" "${PODS_ROOT}/Headers/Public/NMSSH" "${PODS_ROOT}/Headers/Public/NSLogger" "${PODS_ROOT}/Headers/Public/RHPreferences" "${PODS_ROOT}/Headers/Public/SBYZipArchive" "${PODS_ROOT}/Headers/Public/Sparkle"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/SBYZipArchive" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BBlock" "${PODS_ROOT}/Headers/Public/CDEvents" "${PODS_ROOT}/Headers/Public/Crashlytics" "${PODS_ROOT}/Headers/Public/Fabric" "${PODS_ROOT}/Headers/Public/NMSSH" "${PODS_ROOT}/Headers/Public/NSLogger" "${PODS_ROOT}/Headers/Public/RHPreferences" "${PODS_ROOT}/Headers/Public/SBYZipArchive" "${PODS_ROOT}/Headers/Public/Sparkle"
 OTHER_LDFLAGS = -l"z"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

@@ -3,8 +3,12 @@
 #import "FileManager.h"
 #import "IOSManager.h"
 #import "ConfigurationManager.h"
-#import <Sparkle/Sparkle.h>
 #import "ScriptManager.h"
+
+#import <Sparkle/Sparkle.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 
 #define kKeyArchivePath @"xcArchivePath"
 #define kKeyNotificationType @"xcNotificationType"
@@ -21,7 +25,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	LoggerApp(1, @"Loading App Version %@ (%@)",[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"], [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]);
-	
+    
+    [Fabric with:@[[Crashlytics class]]];    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"NSApplicationCrashOnExceptions": @YES }];//App will crash when on uncaught exceptions occured.
+
     if (kCleanTempFolderAtStartup) [FileManager cleanTemporaryData];
     
 	//Disable auto check when in debug mode

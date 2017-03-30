@@ -4,8 +4,6 @@ platform :osx, '10.10'
 inhibit_all_warnings!
 
 
-
-
 def pods
     pod 'CDEvents'#, '~> 1.2.0'
     pod 'NSLogger'#, '~> 1.2'
@@ -15,10 +13,13 @@ def pods
     pod 'RHPreferences'#, '~> 1.0'
     #pod 'UICKeyChainStore'
     pod 'Sparkle'#, '~> 1.9'
+
 end
 
 target 'AppDeploy' do
     pods
+    pod 'Fabric'
+    pod 'Crashlytics'
 end
 
 target 'AppDeployTests' do
