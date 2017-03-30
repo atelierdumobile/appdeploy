@@ -4,14 +4,14 @@ AppDeploy - Visualize, templatized and deploy your app in a second.
 AppDeploy is the fastest way to get info and deploy your mobile app Over The Air without specific server configuration (it only uses html).
 
 ## Features
-- [x] Get quick info on your iOS and Android App (support of .xcarchive, .ipa and .apk archive)
-- [x] iOS: Get fast access to your app resources, plist, embbeded profiles…
-- [x] iOS: Get notified when you make an (xc)archive
-- [x] Use default template (branded or with app icon) or customize your own one
-- [x] Deploy to your server without extra configuration just html support is required
-- [x] Notify build&deployment success with Hipchat or Prowl
-- [x] Integrate it in your Continuous Integration by using the command line
-- [x] Download the app with a versioned url
+- [x] ✨ Get quick info on your iOS and Android App (support of .xcarchive, .ipa and .apk)
+- [x] 🗃 iOS: Get fast access to your app resources, plist, embbeded profiles…
+- [x] 🚨 iOS: Get notified when an xcarchive is built
+- [x] 🌅 Use default template (branded or with app icon) or customize your own one
+- [x] 🚀 Deploy to your server without extra configuration just html support is required
+- [x] 🎉 Notify build&deployment success with Hipchat or Prowl
+- [x] 🚠 Integrate it in your Continuous Integration by using the command line
+- [x] 📲 Download the app with a versioned url
 
 ## Current usage
 - Currently used in our production toolchain with a Jenkins building the app with gym (fastlane) and AppDeploy is generating the download page in script mode from the .ipa or .apk file.
