@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="495"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <menu title="AMainMenu" systemMenu="main" id="29">
+            <items>
+                <menuItem title="AppDeploy" id="56">
+                    <menu key="submenu" title="AppDeploy" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="About AppDeploy" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Check for updates" keyEquivalent="u" id="lW5-Ib-631" userLabel="Check for updates">
+                                <connections>
+                                    <action selector="checkForUpdates:" target="hTt-ZE-Xzc" id="bkE-pe-m8P"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="236">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Preferences…" keyEquivalent="," id="129">
+                                <connections>
+                                    <action selector="showPreferences:" target="371" id="txB-3w-pGX"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="143">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Services" id="131">
+                                <menu key="submenu" title="Services" systemMenu="services" id="130"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="144">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Hide AppDeploy" keyEquivalent="h" id="134">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="367"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="368"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="150">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="370"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="149">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit AppDeploy" keyEquivalent="q" id="136">
+                                <connections>
+                                    <action selector="terminate:" target="-3" id="449"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="File" id="83">
+                    <menu key="submenu" title="File" id="81">
+                        <items>
+                            <menuItem title="Open…" keyEquivalent="o" id="72">
+                                <connections>
+                                    <action selector="openDocument:" target="-1" id="374"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Open last xcarchive" keyEquivalent="f" id="Eiq-TY-1hr" userLabel="Open last xcarchive">
+                                <connections>
+                                    <action selector="findLastArchive:" target="371" id="fwf-dw-ixx"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Open Recent" id="124">
+                                <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="125">
+                                    <items>
+                                        <menuItem title="Clear Menu" id="126">
+                                            <connections>
+                                                <action selector="clearRecentDocuments:" target="-1" id="127"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Show archive in finder" id="ReC-pD-l64">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="showFileInFinder:" target="371" id="7s2-Pi-YfC"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="79">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Close" keyEquivalent="w" id="73">
+                                <connections>
+                                    <action selector="closeWindow:" target="371" id="NTJ-aZ-7mv"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Edit" id="217">
+                    <menu key="submenu" title="Edit" id="205">
+                        <items>
+                            <menuItem title="Undo" keyEquivalent="z" id="207">
+                                <connections>
+                                    <action selector="undo:" target="-1" id="223"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Redo" keyEquivalent="Z" id="215">
+                                <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                                <connections>
+                                    <action selector="redo:" target="-1" id="231"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="206">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Cut" keyEquivalent="x" id="199">
+                                <connections>
+                                    <action selector="cut:" target="-1" id="228"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy" keyEquivalent="c" id="DzQ-oB-e9s">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="1ni-rz-qq8"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy App Url" keyEquivalent="C" id="197" userLabel="Copy Url to Clipboard">
+                                <connections>
+                                    <action selector="copyURLIntoPasteboard:" target="371" id="Mwd-mF-85Z"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste" keyEquivalent="v" id="203">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="226"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Delete" id="202">
+                                <connections>
+                                    <action selector="delete:" target="-1" id="235"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Select All" keyEquivalent="a" id="198">
+                                <connections>
+                                    <action selector="selectAll:" target="-1" id="232"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Actions" id="rbo-ZE-eUR" userLabel="Actions">
+                    <menu key="submenu" title="Actions" id="fD1-yq-Yfk">
+                        <items>
+                            <menuItem title="Generate Template" keyEquivalent="b" id="98e-vR-h1D" userLabel="Generate Template">
+                                <connections>
+                                    <action selector="signAndTemplate:" target="371" id="zT9-EM-lJQ"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Generate Template without binary" keyEquivalent="P" id="MAV-xQ-Q7e">
+                                <connections>
+                                    <action selector="generateTemplateWithoutBinary:" target="371" id="wia-Hq-LXv"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Generate &amp; Publish" keyEquivalent="r" id="bVs-vi-K3T">
+                                <connections>
+                                    <action selector="signAndPush:" target="371" id="Bd3-aW-af3"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="Hjt-zy-tSS" userLabel="-">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Open generated folder" keyEquivalent="O" id="juU-3e-pdL" userLabel="Open Output Folder">
+                                <connections>
+                                    <action selector="openBuildFolder:" target="371" id="FKw-VR-hyh"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Go to Webpage template" keyEquivalent="g" id="ESF-dN-kWW" userLabel="Go to webpage template">
+                                <connections>
+                                    <action selector="openUrl:" target="371" id="Ogc-wt-4X9"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Information" id="fck-0U-Ntv">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Information" id="aVq-0X-W5L">
+                        <items>
+                            <menuItem title="App information" keyEquivalent="i" id="297">
+                                <connections>
+                                    <action selector="moreAboutApp:" target="371" id="G9H-wY-px8"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="tP5-3w-xjc" userLabel="-">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Show Mobile Provisioning Profile" id="1MZ-7d-qDU" userLabel="Open mobile provisonning">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="showMobileprovision:" target="371" id="Ode-mf-hgE"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show Info.plist" id="4IK-iJ-RiV" userLabel="Show info.plist">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="showPlistFile:" target="371" id="Boa-0x-33h"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="3gQ-Eb-99d" userLabel="-">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Open Temp Folder" keyEquivalent="t" id="z2c-7a-Ljm">
+                                <connections>
+                                    <action selector="openTempFolder:" target="371" id="OkE-3R-3xp"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Open Preference Folder" keyEquivalent="P" id="xl6-U4-NyP">
+                                <connections>
+                                    <action selector="openPreferenceFolder:" target="371" id="peo-Ix-2jB"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Open Custom Output Folder" id="EMu-pZ-EcU">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openCustomOutputFolder:" target="371" id="nLR-w7-0Zc"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Open Xcode Archive Folder" keyEquivalent="A" id="uLc-OG-1gR" userLabel="Open Xcode Archives Folder">
+                                <connections>
+                                    <action selector="openArchiveFolder:" target="371" id="Nu5-Kf-Zlu"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="oC4-AT-XqK" userLabel="-">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="19">
+                    <menu key="submenu" title="Window" systemMenu="window" id="24">
+                        <items>
+                            <menuItem title="Minimize" keyEquivalent="m" id="23">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="37"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Zoom" id="239">
+                                <connections>
+                                    <action selector="performZoom:" target="-1" id="240"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="92">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Bring All to Front" id="5">
+                                <connections>
+                                    <action selector="arrangeInFront:" target="-1" id="39"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Help" id="490">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Help" systemMenu="help" id="491">
+                        <items>
+                            <menuItem title="AppDeploy Help" keyEquivalent="?" id="492">
+                                <connections>
+                                    <action selector="showHelp:" target="-1" id="493"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="124" y="97"/>
+        </menu>
+        <window title="AppDeploy" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="371" customClass="MainNSWindow">
+            <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="500" width="500" height="476"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <value key="minSize" type="size" width="500" height="476"/>
+            <value key="maxSize" type="size" width="500" height="476"/>
+            <view key="contentView" id="372" userLabel="Main View">
+                <rect key="frame" x="0.0" y="0.0" width="500" height="476"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <connections>
+                <outlet property="appBundleId" destination="0dj-zq-Esn" id="Lyz-xX-n2T"/>
+                <outlet property="appName" destination="IA6-sn-5VO" id="jjb-KA-jQr"/>
+                <outlet property="appUrlCopyItem" destination="197" id="IWH-Bf-YhS"/>
+                <outlet property="appUrlPreviewButton" destination="KDK-W9-8w7" id="9iG-mv-Hva"/>
+                <outlet property="buildStatusImagePublish" destination="G27-SP-y1C" id="VHB-5j-uP5"/>
+                <outlet property="buildStatusImageTemplate" destination="bRv-iq-exV" id="sGA-k9-nx4"/>
+                <outlet property="buildURLTextField" destination="Opx-UL-C7B" id="pDX-qD-mLp"/>
+                <outlet property="cleanAfterBuildButton" destination="lkV-HZ-ng3" id="9dd-hx-gZa"/>
+                <outlet property="creationDate" destination="cNm-m2-YaX" id="bPy-vo-Pqf"/>
+                <outlet property="displayInformationItem" destination="297" id="tsg-SI-hhn"/>
+                <outlet property="dragImage" destination="BUf-ju-2ec" id="Y7M-JW-hCA"/>
+                <outlet property="dragView" destination="8fA-mu-v11" id="tFA-O1-781"/>
+                <outlet property="fullscreenWaitingIndicator" destination="bSP-uQ-w31" id="ax3-zl-ibM"/>
+                <outlet property="fullscreenWaitingView" destination="KkR-6k-LBA" id="ub8-ps-f7j"/>
+                <outlet property="generateDeployItem" destination="bVs-vi-K3T" id="IOw-Qz-aoz"/>
+                <outlet property="generateTemplateItem" destination="98e-vR-h1D" id="nui-e8-JDi"/>
+                <outlet property="generateTemplateWithoutBinaryItem" destination="MAV-xQ-Q7e" id="Nz8-4R-4h1"/>
+                <outlet property="goToWebpageItem" destination="ESF-dN-kWW" id="FsC-vd-v6Q"/>
+                <outlet property="icone" destination="J4Y-gs-PAz" id="ppg-f5-pkZ"/>
+                <outlet property="infoAppView" destination="TQT-V5-3Px" id="Xqc-nD-xRC"/>
+                <outlet property="mainView" destination="372" id="iCY-wv-2Vc"/>
+                <outlet property="openBuildButton" destination="4Qc-uY-dZg" id="Qsd-yC-foF"/>
+                <outlet property="openCustomOutputFolderItem" destination="EMu-pZ-EcU" id="Ndg-pE-PAt"/>
+                <outlet property="openOutputFolderItem" destination="juU-3e-pdL" id="hay-hw-Ok6"/>
+                <outlet property="previewButton" destination="28M-QP-hXq" id="vEq-E9-i00"/>
+                <outlet property="provisioningButton" destination="xQ8-WV-PEp" id="fGt-cA-9TC"/>
+                <outlet property="provisionningExpirationDate" destination="wwB-ca-cQr" id="Ypc-LL-GSw"/>
+                <outlet property="provisionningTextField" destination="AkK-kN-EIb" id="M4J-VK-sja"/>
+                <outlet property="serverConfigPopupButton" destination="gLc-Vb-XRr" id="Sa9-4m-fxT"/>
+                <outlet property="showFileInFinder" destination="ReC-pD-l64" id="JYc-Ct-lAw"/>
+                <outlet property="showMobileProvisoningItem" destination="1MZ-7d-qDU" id="MMD-Ln-n5y"/>
+                <outlet property="showPlistItem" destination="4IK-iJ-RiV" id="nsO-cM-44X"/>
+                <outlet property="signPublishButton" destination="hxc-aN-PfD" id="MNi-JC-NRv"/>
+                <outlet property="signingIdentity" destination="Fxd-f4-Zla" id="qP5-HZ-8cb"/>
+                <outlet property="sourceFileSize" destination="bhI-jc-ujt" id="htL-bV-W36"/>
+                <outlet property="technicalDetail" destination="qdP-0n-dsY" id="GGm-DL-mcn"/>
+                <outlet property="templateButton" destination="wrw-cv-Q1x" id="adM-o9-53o"/>
+                <outlet property="templatePopupButton" destination="5ci-OI-Iek" id="Bpm-LH-11x"/>
+                <outlet property="uploadProgessIndicator" destination="tuw-fh-0jl" id="2n8-pk-SRH"/>
+                <outlet property="wheelIndicatorPublish" destination="Es4-7a-sK7" id="D9f-E5-GAN"/>
+                <outlet property="wheelIndicatorTemplate" destination="v8x-mU-Mud" id="Hui-cI-gs5"/>
+            </connections>
+            <point key="canvasLocation" x="134" y="-228"/>
+        </window>
+        <customView misplaced="YES" id="KkR-6k-LBA" userLabel="Waiting view fullscreen" customClass="BackgroundView">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="476"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" id="bSP-uQ-w31">
+                    <rect key="frame" x="234" y="222" width="32" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </progressIndicator>
+            </subviews>
+            <point key="canvasLocation" x="891" y="606"/>
+        </customView>
+        <customObject id="494" customClass="AppDelegate">
+            <connections>
+                <outlet property="window" destination="371" id="532"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+        <customView misplaced="YES" id="TQT-V5-3Px" userLabel="Info App">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="476"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="IA6-sn-5VO">
+                    <rect key="frame" x="0.0" y="453" width="454" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="AppName - 1.0 (23)" id="C6i-VZ-bko">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" id="pZW-4H-Ipo">
+                    <rect key="frame" x="6" y="451" width="35" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="recessed" title="&lt;" bezelStyle="recessed" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qrm-ae-17Q">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="systemBold" size="12"/>
+                        <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                    </buttonCell>
+                    <connections>
+                        <action selector="cancel:" target="371" id="VwS-EL-LxC"/>
+                    </connections>
+                </button>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ewH-hU-vE0" userLabel="App detail area">
+                    <rect key="frame" x="-88" y="338" width="632" height="112"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="CMN-ak-dyt"/>
+                </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="J4Y-gs-PAz" userLabel="Icone">
+                    <rect key="frame" x="11" y="338" width="84" height="113"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="IconePlaceholder" id="sS1-Qr-7Ta"/>
+                </imageView>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" id="xQ8-WV-PEp">
+                    <rect key="frame" x="466" y="263" width="14" height="12"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="Play" imagePosition="above" alignment="left" imageScaling="proportionallyUpOrDown" inset="2" id="EMG-bS-z3g">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="showMobileprovision:" target="371" id="24J-2t-tyO"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="hxc-aN-PfD">
+                    <rect key="frame" x="102" y="43" width="356" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Generate &amp; publish" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3SR-sw-IKr">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="signAndPush:" target="371" id="dSc-R3-mYM"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" misplaced="YES" id="AkK-kN-EIb" userLabel="Provisionning textfield">
+                    <rect key="frame" x="106" y="256" width="348" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" alignment="left" placeholderString="Provisionning profil name" usesSingleLineMode="YES" id="wtg-Na-TIJ">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" misplaced="YES" id="Opx-UL-C7B" userLabel="Publishing textfield">
+                    <rect key="frame" x="108" y="73" width="344" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" placeholderString="http://yourserver.com/appname" id="443-Jc-Jx6">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" misplaced="YES" boxType="separator" id="iAR-fZ-Gja">
+                    <rect key="frame" x="-5" y="225" width="505" height="5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </box>
+                <box verticalHuggingPriority="750" misplaced="YES" boxType="separator" id="Pkg-s0-1px">
+                    <rect key="frame" x="-3" y="14" width="505" height="5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </box>
+                <progressIndicator wantsLayer="YES" maxValue="110" style="bar" id="tuw-fh-0jl">
+                    <rect key="frame" x="0.0" y="329" width="500" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </progressIndicator>
+                <button verticalHuggingPriority="750" misplaced="YES" id="4Qc-uY-dZg">
+                    <rect key="frame" x="346" y="150" width="112" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Open folder" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NAD-xA-iXv">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="openBuildFolder:" target="371" id="crW-Bb-4fs"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="wrw-cv-Q1x">
+                    <rect key="frame" x="102" y="150" width="130" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6TE-Yj-7O0">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="signAndTemplate:" target="371" id="avy-fS-vYk"/>
+                    </connections>
+                </button>
+                <button misplaced="YES" id="lkV-HZ-ng3">
+                    <rect key="frame" x="104" y="25" width="297" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Automatically delete build folder in case of successfull upload" bezelStyle="regularSquare" imagePosition="left" controlSize="mini" inset="2" id="5As-Ku-yy5">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="clickDeleteBuildButton:" target="371" id="NUE-6p-atN"/>
+                    </connections>
+                </button>
+                <button id="CyX-5b-Ux9">
+                    <rect key="frame" x="49" y="452" width="397" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="jfv-PI-g8f">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="moreAboutApp:" target="371" id="nLA-oe-7pw"/>
+                    </connections>
+                </button>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" id="KDK-W9-8w7">
+                    <rect key="frame" x="466" y="78" width="14" height="12"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="Play" imagePosition="above" alignment="left" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="xBc-0H-LdC">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="openUrl:" target="371" id="A2c-zs-jsh"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="0dj-zq-Esn">
+                    <rect key="frame" x="104" y="422" width="344" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="BundleId" id="Jts-Yt-5uv">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bhI-jc-ujt">
+                    <rect key="frame" x="104" y="399" width="344" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="FileSize" id="pLf-YS-61f">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="cNm-m2-YaX">
+                    <rect key="frame" x="104" y="376" width="204" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="Creation Date" id="dSE-FW-Zo7">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="qdP-0n-dsY">
+                    <rect key="frame" x="104" y="338" width="255" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" id="qea-7G-i0A">
+                        <font key="font" metaFont="cellTitle"/>
+                        <string key="title">Base SDK : iphoneos7.1 - Minimum OS: 7.1
+</string>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="DLG-Ij-Cai">
+                    <rect key="frame" x="13" y="106" width="70" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=" ☁️ Server" id="m9e-uA-jxj">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="MWr-a0-jeN">
+                    <rect key="frame" x="13" y="197" width="86" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=" 🎨 Template" id="iCM-Tv-XPO">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" misplaced="YES" id="5ci-OI-Iek">
+                    <rect key="frame" x="106" y="189" width="349" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" title="Default" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="3DB-cR-aZP" id="qgv-6l-GWX">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="wvT-sy-6We">
+                            <items>
+                                <menuItem title="Default" state="on" id="3DB-cR-aZP"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="templateConfigurationChange:" target="371" id="3pg-es-FNc"/>
+                    </connections>
+                </popUpButton>
+                <popUpButton verticalHuggingPriority="750" misplaced="YES" id="B4i-es-Gj3">
+                    <rect key="frame" x="106" y="101" width="349" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" title="Beta configuration" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="elv-23-Rlz" id="gLc-Vb-XRr">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="DqF-Ec-mJJ">
+                            <items>
+                                <menuItem title="Beta configuration" state="on" id="elv-23-Rlz"/>
+                                <menuItem title="Release configuration" tag="1" id="tku-Ch-XgZ"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="serverConfigurationChange:" target="371" id="EiJ-9c-lIR"/>
+                        <binding destination="V2P-Ki-L5L" name="selectedIndex" keyPath="values.configurationMode" id="d3K-l7-urQ">
+                            <dictionary key="options">
+                                <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                <bool key="NSValidatesImmediately" value="YES"/>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </popUpButton>
+                <box verticalHuggingPriority="750" misplaced="YES" boxType="separator" id="1z8-Yq-tTm">
+                    <rect key="frame" x="2" y="140" width="505" height="5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </box>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="G27-SP-y1C" userLabel="Error status">
+                    <rect key="frame" x="458" y="50" width="34" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="CheckmarkGreen" id="OFT-gt-iB2"/>
+                    <accessibility description="Check for generation"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="143-p9-LPW">
+                    <rect key="frame" x="12" y="313" width="140" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="  🔧 Signature &amp; profil" id="6Ki-wD-9Kv">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="Fxd-f4-Zla">
+                    <rect key="frame" x="106" y="286" width="381" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" placeholderString="Signing Identity iPhoneDeveloper : XXXX YYYY (XXXXXXXXXX)" usesSingleLineMode="YES" id="yhe-ph-2xS">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="v8x-mU-Mud">
+                    <rect key="frame" x="467" y="160" width="16" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <accessibility description="Wheel template"/>
+                </progressIndicator>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="bRv-iq-exV" userLabel="Error status">
+                    <rect key="frame" x="458" y="157" width="34" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="CheckmarkGreen" id="cS0-H1-qJd"/>
+                    <accessibility description="Check for template generation"/>
+                </imageView>
+                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="Es4-7a-sK7">
+                    <rect key="frame" x="467" y="53" width="16" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <accessibility description="Wheel publish"/>
+                </progressIndicator>
+                <button verticalHuggingPriority="750" misplaced="YES" id="28M-QP-hXq">
+                    <rect key="frame" x="227" y="150" width="124" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Open template" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Lyv-uJ-IrW">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="previewTemplateAction:" target="371" id="xW7-rx-Jmu"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" misplaced="YES" id="wwB-ca-cQr" userLabel="Provisionning textfield">
+                    <rect key="frame" x="106" y="232" width="348" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" alignment="left" placeholderString="Expiration date" usesSingleLineMode="YES" id="GbE-qo-vzU">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="732" y="1583"/>
+        </customView>
+        <customView misplaced="YES" id="8fA-mu-v11" userLabel="Drag View">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="476"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" misplaced="YES" id="39o-Dk-UWa">
+                    <rect key="frame" x="157" y="13" width="186" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Find last Xcode archive" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XXY-Pt-aTQ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="findLastArchive:" target="371" id="znv-Rp-AnI"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="jVm-Io-Tcc">
+                    <rect key="frame" x="43" y="84" width="414" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" selectable="YES" editable="YES" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="center" title="Drag an ipa, xcarchive or apk file to start." id="3Fz-eP-dNH">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView id="BUf-ju-2ec">
+                    <rect key="frame" x="116" y="105" width="268" height="263"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="DragZone" id="I8E-PM-JDD"/>
+                </imageView>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" id="FUx-Rc-YO9">
+                    <rect key="frame" x="457" y="17" width="25" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HFX-RG-pWp">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="help:" target="371" id="lRp-wZ-6NK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="204" y="606"/>
+        </customView>
+        <customObject id="hTt-ZE-Xzc" customClass="SUUpdater"/>
+        <userDefaultsController representsSharedInstance="YES" id="V2P-Ki-L5L"/>
+        <viewController id="ylA-x1-GFT">
+            <view key="view" id="jne-7t-NaT">
+                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="CheckmarkGreen" width="256" height="256"/>
+        <image name="DragZone" width="326" height="322"/>
+        <image name="IconePlaceholder" width="1024" height="1024"/>
+        <image name="Play" width="200" height="200"/>
+    </resources>
+</document>

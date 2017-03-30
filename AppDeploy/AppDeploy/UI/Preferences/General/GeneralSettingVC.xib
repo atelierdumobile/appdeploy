@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GeneralSettingVC">
+            <connections>
+                <outlet property="automaticallyOpenBuildFolder" destination="EPt-95-Iaz" id="iEU-3g-D4y"/>
+                <outlet property="buildDirectory" destination="bIk-LO-BSy" id="gYI-e5-Epn"/>
+                <outlet property="customizeTemplateFolderButton" destination="wuQ-hd-V9L" id="BR0-em-NzM"/>
+                <outlet property="findAutomaticallyArchive" destination="rKl-nV-Tdo" id="XGM-PQ-kL0"/>
+                <outlet property="view" destination="qJH-9h-U5a" id="3dZ-Ge-SWN"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <view id="qJH-9h-U5a">
+            <rect key="frame" x="0.0" y="0.0" width="403" height="296"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4TX-F6-Wzb">
+                    <rect key="frame" x="17" y="17" width="369" height="118"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="0on-Qh-okN"/>
+                </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hnv-fR-QGO">
+                    <rect key="frame" x="17" y="174" width="369" height="85"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="syH-WU-Jzs"/>
+                </imageView>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKl-nV-Tdo">
+                    <rect key="frame" x="36" y="224" width="277" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Find automatically last archive at startup" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="cZI-uD-Dym">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="clickFindAutomaticallyArchive:" target="-2" id="Ku9-lm-N9g"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EPt-95-Iaz">
+                    <rect key="frame" x="36" y="191" width="315" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Automatically open template folder after a build" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="rdl-wJ-4eI">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="clickAutomaticallyOpenTemplate:" target="-2" id="7JO-JG-xQO"/>
+                    </connections>
+                </button>
+                <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bIk-LO-BSy">
+                    <rect key="frame" x="35" y="68" width="200" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <pathCell key="cell" selectable="YES" editable="YES" enabled="NO" alignment="left" pathStyle="popUp" id="Ahc-hc-JHT">
+                        <font key="font" metaFont="system"/>
+                    </pathCell>
+                    <connections>
+                        <action selector="changeOutputFolder:" target="-2" id="egK-Jz-atl"/>
+                    </connections>
+                </pathControl>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wuQ-hd-V9L">
+                    <rect key="frame" x="36" y="98" width="171" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Customize output folder" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ndC-uE-GZ2">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="clickCustomizeTemplateFolder:" target="-2" id="kqa-P4-vO8"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDa-fB-pYh">
+                    <rect key="frame" x="32" y="29" width="346" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Open selected template folder" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gbU-Wd-wUK">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="openTemporaryFolder:" target="-2" id="z5d-WH-mD6"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JYI-SN-zv1">
+                    <rect key="frame" x="19" y="140" width="146" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Template &amp; build folder" id="yKF-HH-vLb">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3mC-M1-s14">
+                    <rect key="frame" x="19" y="264" width="52" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="General" id="6Kp-ab-4Ql">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="483.5" y="227"/>
+        </view>
+        <userDefaultsController representsSharedInstance="YES" id="eRZ-mf-VcH"/>
+    </objects>
+</document>

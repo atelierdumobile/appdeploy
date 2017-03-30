@@ -1,0 +1,27 @@
+platform :osx, '10.10'
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+
+
+
+def pods
+    pod 'CDEvents'#, '~> 1.2.0'
+    pod 'NSLogger'#, '~> 1.2'
+    pod 'BBlock'#, '~> 1.1'
+    pod 'NMSSH'
+    pod 'SBYZipArchive'#, '~> 0.3'
+    pod 'RHPreferences'#, '~> 1.0'
+    #pod 'UICKeyChainStore'
+    pod 'Sparkle'#, '~> 1.9'
+end
+
+target 'AppDeploy' do
+    pods
+end
+
+target 'AppDeployTests' do
+    pods
+end
+

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AndroidSettingVC">
+            <connections>
+                <outlet property="buildStatusImage" destination="InB-5m-mlI" id="HhP-2W-nbY"/>
+                <outlet property="sdkAndroidFolder" destination="KVl-nf-Re8" id="O1U-fJ-HFP"/>
+                <outlet property="view" destination="qJH-9h-U5a" id="3dZ-Ge-SWN"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <view id="qJH-9h-U5a">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="211"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7HG-gd-3vf" userLabel="BackgroundArea">
+                    <rect key="frame" x="17" y="17" width="396" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="Tyf-RX-huv"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" preferredMaxLayoutWidth="359" translatesAutoresizingMaskIntoConstraints="NO" id="UL7-ss-hBC" userLabel="Description">
+                    <rect key="frame" x="32" y="87" width="363" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Take advantage of Advance Android information by referencing your Android sdk folder." id="upA-M2-FMr">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GYt-QM-bXS">
+                    <rect key="frame" x="28" y="36" width="346" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Open Android sdk defined" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ge2-68-Xkm">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="openAndroidSDKFolder:" target="-2" id="XH3-Kw-WC6"/>
+                    </connections>
+                </button>
+                <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KVl-nf-Re8">
+                    <rect key="frame" x="26" y="131" width="345" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <pathCell key="cell" selectable="YES" editable="YES" alignment="left" pathStyle="popUp" id="MUE-aH-SuV">
+                        <font key="font" metaFont="system"/>
+                    </pathCell>
+                    <connections>
+                        <action selector="changeOutputFolder:" target="-2" id="Evu-Wy-JLO"/>
+                    </connections>
+                </pathControl>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="InB-5m-mlI" userLabel="Error status">
+                    <rect key="frame" x="379" y="134" width="25" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="CheckmarkGreen" id="Aqg-tt-7cz"/>
+                    <accessibility description="Check for template generation"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5h-KN-oJT">
+                    <rect key="frame" x="17" y="174" width="128" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Android SDK folder: " id="9UB-Sc-iJX">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="428" y="111.5"/>
+        </view>
+        <userDefaultsController representsSharedInstance="YES" id="eRZ-mf-VcH"/>
+    </objects>
+    <resources>
+        <image name="CheckmarkGreen" width="256" height="256"/>
+    </resources>
+</document>

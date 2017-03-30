@@ -1,0 +1,28 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+
+#import <Cocoa/Cocoa.h>
+#import "NSLogger.h"
+#import "Logger.h"
+#import "NSString+normalization.h"
+#import "Constants.h"
+#import <QuartzCore/QuartzCore.h>
+#import <CDEvents.h>
+#import "ProvisionningProfileHelper.h"
+#import <BBlock.h>
+#import "ProwlManager.h"
+#import "ABApplication.h"
+#import "IOSManager.h"
+#import "AndroidManager.h"
+#import "Preference.h"
+#import "NSString+contains.h"
+#import "NSViewController+popup.h"
+#import "NSWindow+popup.h"
+#endif
+
+
