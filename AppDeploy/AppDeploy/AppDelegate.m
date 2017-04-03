@@ -35,6 +35,8 @@
 	#ifdef DEBUG
 		LoggerApp(0,@"Warning - Version control check disabled");
 		[[SUUpdater sharedUpdater]setAutomaticallyChecksForUpdates:NO];
+    else
+    	[[SUUpdater sharedUpdater]setAutomaticallyChecksForUpdates:YES];
 	#endif
 	
     //Script
