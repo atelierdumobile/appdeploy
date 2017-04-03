@@ -1,4 +1,6 @@
-AppDeploy - Visualize, templatized and deploy your app in a second.
+![Png](ReadmeData/AppDeployLogo.png)
+
+Visualize, templatized and deploy your app in a second.
 ============
 
 AppDeploy is the fastest way to get info and deploy your mobile app Over The Air without specific server configuration (it only uses html).
