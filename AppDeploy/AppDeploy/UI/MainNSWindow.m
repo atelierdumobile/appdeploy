@@ -350,9 +350,9 @@ typedef enum {
 
 - (IBAction)help:(id)sender {
 	NSString * message = @""
-	"App builder is taking care of iOS and Android application deployment, generating a friendly download page and upload it to atelierdumobile.com server.\n\n"
-	"• iOS : just drag an existing .xcarchive or let appDeploy automatic detect it. For detection just go in Xcode->Product->Archive you will be receive an OSX notification to handle it. In both cases configure an entreprise certificate to avoid handling UDID. \nTips: to change the appname used in the url, add in your info.plist the key \"AppDeployServerFolder\" and as a value define an appname (without special caracaters).\n\n"
-	"• Android : without sdk android path configured, a simple support only, just drag an existing .apk signed file by respecting the convention name_versionName_versionCode.apk (ie weather_1.3_23.apk)."
+	"App builder is taking care of iOS and Android application deployment, generating a friendly download page and upload it to your own server requiring just html support.\n\n"
+	"• iOS : just drag an existing .ipa or .xcarchive. AppDeploy can automatically detect an archive (Xcode->Product->Archive) and display an OSX notification to handle the build. In both cases configure an entreprise certificate to avoid handling UDID.\n\n"
+	"• Android : just drag an existing .apk file. Full support with android sdk configured, simple support otherwise with by respecting apk file naming {name}_{versionName}_{versionCode}.apk (ie weather_1.3_23.apk)."
 	"";
 	[self showMessage:message withTitle:@"About"];
 }
