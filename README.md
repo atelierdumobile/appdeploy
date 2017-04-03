@@ -1,4 +1,6 @@
-![Png](ReadmeData/AppDeployLogo.png)
+<h3 align="center">
+  <img src="ReadmeData/AppDeployLogo.png" alt="AppDeploy Logo" />
+</h3>
 
 Visualize, templatized and deploy your app in a second.
 ============
