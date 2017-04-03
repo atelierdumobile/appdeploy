@@ -5,6 +5,9 @@ Allow to deploy beta from xcarchive Xcode build-in system and apk basic support 
 
 ChangeLog
 ==========
+#4.4/53
+- New App icons
+
 #4.3/52
 - Integrate Fabric Crashlytics and allow app to crash (?? :p)
 - Add keyboard shortcuts & easier keyboard navigation between textfield
