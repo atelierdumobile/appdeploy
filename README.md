@@ -2,7 +2,7 @@
   <img src="ReadmeData/AppDeployLogo.png" alt="AppDeploy Logo" />
 </h3>
 
-Visualize, templatized and deploy your app in a second.
+Visualize, template and deploy your app in a second.
 ============
 
 AppDeploy is the fastest way to get info and deploy your mobile app Over The Air without specific server configuration (it only uses html).
