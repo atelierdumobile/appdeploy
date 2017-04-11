@@ -58,19 +58,15 @@ typedef NS_ENUM(NSInteger,ApplicationType) {ApplicationTypeIOS, ApplicationTypeA
 //App context variables
 
 
-//For xcarchive mode
-@property (strong) NSURL 		* xcarchive;//apk url is also store in this… need to be cleaned
+//For xcarchive/ipa/apk mode
+@property (strong) NSURL 		* ipaURL;
+@property (strong) NSURL 		* archive;//apk url is also store in this… need to be cleaned
 @property (strong) NSURL 		* archiveAppFolder;//xcarchive: *.xcarchive/Products/Applications/AppName.app/ IPA:the unzip folder
 @property (strong) NSURL 		* buildFolderPath;//Point to the temp build folder (maybe automatically cleaned)
 @property (strong) NSURL 		* outputPath;//if not empty the file have been moved from the buildFolderPath to the user customize output folder. Prefered method to get the actual path is currentOutputPath.
 @property (readonly) NSURL 		* currentOutputPath;//give the path to the build dir or if moved to the customized output path
 
-
 @property (strong) NSImageView 	*appIcone;//used to store the image from zip without to compute it several time
-
-
-//For ipa mode
-@property (strong) NSURL 		* ipaURL;
 
 + (ABApplication *) fakeApplication;
 + (ABApplication *) applicationWithApk:(NSURL*)archiveURL;
@@ -79,7 +75,7 @@ typedef NS_ENUM(NSInteger,ApplicationType) {ApplicationTypeIOS, ApplicationTypeA
 
 - (NSURL*) sourceFileURL;
 - (BOOL) isIpa;
-- (BOOL) isXcarchive;
+- (BOOL) isArchive;
 - (BOOL) isApk;
 
 - (NSString*) normalizedName;

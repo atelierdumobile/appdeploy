@@ -147,7 +147,7 @@
                     exit(SHELL_FAILURE_CODE);
                 }
                 else {
-                    LoggerApp(1, @"****** Last archive found %@ ******", [app.xcarchive relativeString]);
+                    LoggerApp(1, @"****** Last archive found %@ ******", [app.archive relativeString]);
                 }
                 
             }
@@ -203,7 +203,7 @@
                 imageData = [IOSManager imageFromIPAFile:app.ipaURL withFileName:app.iconeName];
             }
             else if (app.isApk) {
-                imageData = [AndroidManager imageDataFromAPK:app.xcarchive withFileName:app.iconeName];
+                imageData = [AndroidManager imageDataFromAPK:app.archive withFileName:app.iconeName];
             }
             
             if (imageData !=nil) {

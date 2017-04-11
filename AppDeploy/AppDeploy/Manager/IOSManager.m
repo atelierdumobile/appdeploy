@@ -186,14 +186,14 @@
 		}
 		
 		//Create a temp folder
-		if (!IsEmpty(emptyFolderPath)&&!IsEmpty(provisionning)&&!IsEmpty([application.xcarchive path])) {
-			LoggerApp(4,@"createIPA starting url=%@",[application.xcarchive path]);
+		if (!IsEmpty(emptyFolderPath)&&!IsEmpty(provisionning)&&!IsEmpty([application.archive path])) {
+			LoggerApp(4,@"createIPA starting url=%@",[application.archive path]);
 			
 			NSURL * destinationIPA = [emptyFolderPath URLByAppendingPathComponent: application.ipa];
 			
 			
 			LoggerTask(3, @"Will executing /usr/bin/xcodebuild -exportArchive -exportFormat ipa -archivePath \"%@\" -exportPath \"%@\" -exportProvisioningProfile %@",
-					   [application.xcarchive path],
+					   [application.archive path],
 					   [destinationIPA path],
 					   provisionning);
 			
@@ -206,7 +206,7 @@
 					 currentTask= [[TaskManager alloc] init];
 				}
 				
-				int codeResult = [currentTask executeXcodeBuildForArchive:application.xcarchive.path
+				int codeResult = [currentTask executeXcodeBuildForArchive:application.archive.path
 														 toDestinationIPA:destinationIPA.path
 														withProvisionning:provisionning
 															 outputString:&outputString

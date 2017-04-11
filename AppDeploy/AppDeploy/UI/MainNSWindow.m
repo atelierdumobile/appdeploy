@@ -253,7 +253,7 @@ typedef enum {
 			application.appIcone = self.icone;
 		}
 		else if (application.isApk) {
-			NSData * imageData = [AndroidManager imageDataFromAPK:application.xcarchive];
+			NSData * imageData = [AndroidManager imageDataFromAPK:application.archive];
 			self.icone.image = [[NSImage alloc] initWithData:imageData];
 			application.appIcone = self.icone;
 		}
@@ -576,7 +576,7 @@ typedef enum {
 				[self openFolderButtonWithStatus:YES];
                 self.previewButton.enabled = YES;
 				
-				if (app.isXcarchive) {
+				if (app.isArchive) {
 					[self updateFileSizeWithApplication:app];
 				}
 				//we keep the url display generaly we like to put it in an email
@@ -638,7 +638,7 @@ typedef enum {
 			buildFolder = [app handleBuildWithTask:&task];
 		}
 		
-		if (app.isXcarchive) {
+		if (app.isArchive) {
 			[self updateFileSizeWithApplication:app];
 		}
 		
@@ -869,7 +869,7 @@ typedef enum {
         self.templateButton.enabled = YES;
 	}
     
-    if (application.type == ApplicationTypeIOS && application.xcarchive) {
+    if (application.type == ApplicationTypeIOS && application.archive) {
         self.technicalDetail.hidden = NO;
         self.technicalDetail.stringValue = [NSString stringWithFormat:@"SDK: %@ Minimum: %@",application.sdk, application.minimumOS];
         self.templateButton.title = @"Sign & Template";

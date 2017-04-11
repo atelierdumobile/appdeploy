@@ -33,8 +33,8 @@
 	return self.type == ApplicationTypeAndroid;
 }
 
-- (BOOL) isXcarchive {
-	return !IsEmpty(self.xcarchive);
+- (BOOL) isArchive {
+	return !IsEmpty(self.archive);
 }
 
 - (NSURL*) outputfolderVersionPath {
@@ -69,8 +69,8 @@
 
 - (NSURL*) sourceFileURL {
 	if (self.isIpa) return self.ipaURL;
-	else if(self.isXcarchive) return self.xcarchive;
-	else if (self.isApk) return self.xcarchive;
+	else if(self.isArchive) return self.archive;
+	else if (self.isApk) return self.archive;
 	return nil;
 }
 
@@ -310,7 +310,7 @@
 	
 	//Commun
 	application.serverFolder = [NSString stringWithFormat:@"%@",application.normalizedName];
-	application.xcarchive = archiveURL;//TODO use a generic path name and test on a flag instead
+	application.archive = archiveURL;//TODO use a generic path name and test on a flag instead
 	application.creationDate = [FileManager creationDateForPath:archiveURL.path];
 	application.signingIdentity = @"";
 	
@@ -335,11 +335,11 @@
 	if (self.isIpa) {
 		self.sourceFileSize = [FileManager readableSizeForPath:[self.ipaURL path]];
 	}
-	else if (self.isXcarchive) {
-		self.sourceFileSize = [FileManager readableSizeForPath:[self.xcarchive path]];
+	else if (self.isArchive) {
+		self.sourceFileSize = [FileManager readableSizeForPath:[self.archive path]];
 	}
 	else if (self.isApk) {
-		self.sourceFileSize = [FileManager readableSizeForPath:[self.xcarchive path]];
+		self.sourceFileSize = [FileManager readableSizeForPath:[self.archive path]];
 	}
 	
 	self.destFileSize = [FileManager readableSizeForPath:self.currentOutputPath.path];
@@ -473,7 +473,7 @@
 		application = [[ABApplication alloc]init];
 		application.type = ApplicationTypeIOS;
 		
-		application.xcarchive = archiveURL;
+		application.archive = archiveURL;
 		
 		application.name = dictionary[@"Name"];
 		application.serverFolder = application.normalizedName;//default value
@@ -577,11 +577,11 @@
 
 //@return build folder in case of success
 + (NSURL *) handleBuild:(ABApplication *)application withTask:(TaskManager **)task {
-	LoggerApp(4, @"handleBuild - xcarchiveAppURL=%@ - application=%@",application.xcarchive ,application);
+	LoggerApp(4, @"handleBuild - xcarchiveAppURL=%@ - application=%@",application.archive ,application);
 	
 	if (IsEmpty(application)) return nil;
 	
- if ( (application.type==ApplicationTypeIOS && (!IsEmpty(application.xcarchive) || !IsEmpty(application.ipaURL)) )
+ if ( (application.type==ApplicationTypeIOS && (!IsEmpty(application.archive) || !IsEmpty(application.ipaURL)) )
 	 || (application.type==ApplicationTypeAndroid  && !IsEmpty(application.apk) )
 	 ){
 		
@@ -602,7 +602,7 @@
 			BOOL success =  NO;
 			
 			//Xcarchive
-			if (application.type == ApplicationTypeIOS && application.xcarchive) {
+			if (application.type == ApplicationTypeIOS && application.archive) {
 				success = [IOSManager createIPAWithApplication:application
 													  toFolder:folderDestination
 												 provisionning:application.provisionningProfile
@@ -626,7 +626,7 @@
 					destinationFileName = application.ipa;
 				}
 				else if (application.isApk) {
-					archiveURL = application.xcarchive;
+					archiveURL = application.archive;
 					destinationFileName = application.apk;
 					
 				}

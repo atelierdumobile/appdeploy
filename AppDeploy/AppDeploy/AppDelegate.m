@@ -103,7 +103,7 @@
 	NSUserNotification *notification = [[NSUserNotification alloc] init];
 	notification.title = @"New build detected";
 	notification.informativeText = [NSString stringWithFormat:@"Do you want to handle the build \"%@\" ?",application.name];
-	notification.userInfo = @{kKeyArchivePath:application.xcarchive.path, kKeyNotificationType:kValueActionTypeBuildDetection};
+	notification.userInfo = @{kKeyArchivePath:application.archive.path, kKeyNotificationType:kValueActionTypeBuildDetection};
     notification.soundName = NSUserNotificationDefaultSoundName;
     [notification setValue:@YES forKey:@"_showsButtons"];
 	notification.hasActionButton = YES;
