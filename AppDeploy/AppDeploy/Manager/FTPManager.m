@@ -199,7 +199,10 @@
 		
 		if (![nmsftp directoryExistsAtPath:rootDestinationDirectory]) {
 			result = [nmsftp createDirectoryAtPath:rootDestinationDirectory];
-			LoggerFile(3, @"Creating root folder=%@ result=%d",rootDestinationDirectory, result);
+			if (result) LoggerFile(3, @"Creating root folder=%@ result=%d",rootDestinationDirectory, result);
+            else LoggerFile(0, @"Error creating root folder=%@ result=%d",rootDestinationDirectory, result);
+            
+            *errorString = [NSString stringWithFormat:@"Can't create folder on server=%@", rootDestinationDirectory];
 		}
 		
 		if (result ) {//protection
