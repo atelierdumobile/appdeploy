@@ -1,10 +1,11 @@
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Sparkle"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 ${inherited} NSLOGGER_WAS_HERE=1 NSLOGGER_BUILD_USERNAME="${USER}" $(inherited) USE_FILE32API=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BBlock" "${PODS_ROOT}/Headers/Public/CDEvents" "${PODS_ROOT}/Headers/Public/Crashlytics" "${PODS_ROOT}/Headers/Public/Fabric" "${PODS_ROOT}/Headers/Public/NMSSH" "${PODS_ROOT}/Headers/Public/NSLogger" "${PODS_ROOT}/Headers/Public/RHPreferences" "${PODS_ROOT}/Headers/Public/SBYZipArchive" "${PODS_ROOT}/Headers/Public/Sparkle"
-LD_RUNPATH_SEARCH_PATHS = @loader_path/../Frameworks
+LD_RUNPATH_SEARCH_PATHS = @loader_path/../Frameworks $(inherited) '@executable_path/../Frameworks' '@loader_path/../Frameworks'
 LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/BBlock" "$PODS_CONFIGURATION_BUILD_DIR/CDEvents" "$PODS_CONFIGURATION_BUILD_DIR/NMSSH" "$PODS_CONFIGURATION_BUILD_DIR/NSLogger" "$PODS_CONFIGURATION_BUILD_DIR/RHPreferences" "$PODS_CONFIGURATION_BUILD_DIR/SBYZipArchive" $(inherited) "${PODS_ROOT}/NMSSH/NMSSH-OSX/Libraries/lib"
 OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/BBlock" -isystem "${PODS_ROOT}/Headers/Public/CDEvents" -isystem "${PODS_ROOT}/Headers/Public/Crashlytics" -isystem "${PODS_ROOT}/Headers/Public/Fabric" -isystem "${PODS_ROOT}/Headers/Public/NMSSH" -isystem "${PODS_ROOT}/Headers/Public/NSLogger" -isystem "${PODS_ROOT}/Headers/Public/RHPreferences" -isystem "${PODS_ROOT}/Headers/Public/SBYZipArchive" -isystem "${PODS_ROOT}/Headers/Public/Sparkle"
 OTHER_LDFLAGS = $(inherited) -ObjC -l"BBlock" -l"CDEvents" -l"NMSSH" -l"NSLogger" -l"RHPreferences" -l"SBYZipArchive" -l"crypto" -l"ssh2" -l"ssl" -l"z" -framework "CFNetwork" -framework "Cocoa" -framework "CoreServices" -framework "Sparkle" -framework "SystemConfiguration"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
