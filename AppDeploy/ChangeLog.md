@@ -5,6 +5,10 @@ Allow to deploy beta from xcarchive Xcode build-in system and apk basic support 
 
 ChangeLog
 ==========
+#4.5/54
+- Compatibility with Xcode 9
+- Disable the xcharchive build feature
+
 #4.4/53
 - New App icons
 
