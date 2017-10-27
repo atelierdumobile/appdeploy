@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -11,7 +12,109 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <window title="AppDeploy" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="371" customClass="MainNSWindow">
+            <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="500" width="500" height="476"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <value key="minSize" type="size" width="500" height="476"/>
+            <value key="maxSize" type="size" width="500" height="476"/>
+            <view key="contentView" id="372" userLabel="Main View">
+                <rect key="frame" x="0.0" y="0.0" width="500" height="476"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <connections>
+                <outlet property="appBundleId" destination="0dj-zq-Esn" id="Lyz-xX-n2T"/>
+                <outlet property="appName" destination="IA6-sn-5VO" id="jjb-KA-jQr"/>
+                <outlet property="appUrlCopyItem" destination="197" id="IWH-Bf-YhS"/>
+                <outlet property="appUrlPreviewButton" destination="KDK-W9-8w7" id="9iG-mv-Hva"/>
+                <outlet property="buildStatusImagePublish" destination="G27-SP-y1C" id="VHB-5j-uP5"/>
+                <outlet property="buildStatusImageTemplate" destination="bRv-iq-exV" id="sGA-k9-nx4"/>
+                <outlet property="buildURLTextField" destination="Opx-UL-C7B" id="pDX-qD-mLp"/>
+                <outlet property="cleanAfterBuildButton" destination="lkV-HZ-ng3" id="9dd-hx-gZa"/>
+                <outlet property="configurationPopUpButton" destination="B4i-es-Gj3" id="Bzx-oF-B1y"/>
+                <outlet property="creationDate" destination="cNm-m2-YaX" id="bPy-vo-Pqf"/>
+                <outlet property="displayInformationItem" destination="297" id="tsg-SI-hhn"/>
+                <outlet property="dragImage" destination="BUf-ju-2ec" id="Y7M-JW-hCA"/>
+                <outlet property="dragView" destination="8fA-mu-v11" id="tFA-O1-781"/>
+                <outlet property="fullscreenWaitingIndicator" destination="bSP-uQ-w31" id="ax3-zl-ibM"/>
+                <outlet property="fullscreenWaitingView" destination="KkR-6k-LBA" id="ub8-ps-f7j"/>
+                <outlet property="generateDeployItem" destination="bVs-vi-K3T" id="IOw-Qz-aoz"/>
+                <outlet property="generateTemplateItem" destination="98e-vR-h1D" id="nui-e8-JDi"/>
+                <outlet property="generateTemplateWithoutBinaryItem" destination="MAV-xQ-Q7e" id="Nz8-4R-4h1"/>
+                <outlet property="goToWebpageItem" destination="ESF-dN-kWW" id="FsC-vd-v6Q"/>
+                <outlet property="icone" destination="J4Y-gs-PAz" id="ppg-f5-pkZ"/>
+                <outlet property="infoAppView" destination="TQT-V5-3Px" id="Xqc-nD-xRC"/>
+                <outlet property="mainView" destination="372" id="iCY-wv-2Vc"/>
+                <outlet property="openBuildButton" destination="4Qc-uY-dZg" id="Qsd-yC-foF"/>
+                <outlet property="openCustomOutputFolderItem" destination="EMu-pZ-EcU" id="Ndg-pE-PAt"/>
+                <outlet property="openOutputFolderItem" destination="juU-3e-pdL" id="hay-hw-Ok6"/>
+                <outlet property="previewButton" destination="28M-QP-hXq" id="vEq-E9-i00"/>
+                <outlet property="provisioningButton" destination="xQ8-WV-PEp" id="fGt-cA-9TC"/>
+                <outlet property="provisionningExpirationDate" destination="wwB-ca-cQr" id="Ypc-LL-GSw"/>
+                <outlet property="provisionningTextField" destination="AkK-kN-EIb" id="M4J-VK-sja"/>
+                <outlet property="serverConfigPopupButton" destination="gLc-Vb-XRr" id="Sa9-4m-fxT"/>
+                <outlet property="showFileInFinder" destination="ReC-pD-l64" id="JYc-Ct-lAw"/>
+                <outlet property="showMobileProvisoningItem" destination="1MZ-7d-qDU" id="MMD-Ln-n5y"/>
+                <outlet property="showPlistItem" destination="4IK-iJ-RiV" id="nsO-cM-44X"/>
+                <outlet property="signPublishButton" destination="hxc-aN-PfD" id="MNi-JC-NRv"/>
+                <outlet property="signingIdentity" destination="Fxd-f4-Zla" id="qP5-HZ-8cb"/>
+                <outlet property="sourceFileSize" destination="bhI-jc-ujt" id="htL-bV-W36"/>
+                <outlet property="technicalDetail" destination="qdP-0n-dsY" id="GGm-DL-mcn"/>
+                <outlet property="templateButton" destination="wrw-cv-Q1x" id="adM-o9-53o"/>
+                <outlet property="templatePopupButton" destination="5ci-OI-Iek" id="Bpm-LH-11x"/>
+                <outlet property="templateServerView" destination="qc0-cA-3cO" id="2wA-NJ-Amk"/>
+                <outlet property="uploadProgessIndicator" destination="tuw-fh-0jl" id="2n8-pk-SRH"/>
+                <outlet property="wheelIndicatorPublish" destination="Es4-7a-sK7" id="D9f-E5-GAN"/>
+                <outlet property="wheelIndicatorTemplate" destination="v8x-mU-Mud" id="Hui-cI-gs5"/>
+                <outlet property="xcarchiveBottomView" destination="68m-w7-w2E" id="7ti-EY-eVh"/>
+            </connections>
+            <point key="canvasLocation" x="134" y="-228"/>
+        </window>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView misplaced="YES" id="8fA-mu-v11" userLabel="Drag View">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="476"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" misplaced="YES" id="39o-Dk-UWa">
+                    <rect key="frame" x="157" y="13" width="186" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Find last Xcode archive" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XXY-Pt-aTQ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="findLastArchive:" target="371" id="znv-Rp-AnI"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="YES" id="jVm-Io-Tcc">
+                    <rect key="frame" x="43" y="84" width="414" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" selectable="YES" editable="YES" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="center" title="Drag an ipa, xcarchive or apk file to start." id="3Fz-eP-dNH">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView id="BUf-ju-2ec">
+                    <rect key="frame" x="116" y="105" width="268" height="263"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="DragZone" id="I8E-PM-JDD"/>
+                </imageView>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" id="FUx-Rc-YO9">
+                    <rect key="frame" x="457" y="17" width="25" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HFX-RG-pWp">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="help:" target="371" id="lRp-wZ-6NK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="204" y="606"/>
+        </customView>
         <menu title="AMainMenu" systemMenu="main" id="29">
             <items>
                 <menuItem title="AppDeploy" id="56">
@@ -290,62 +393,6 @@
             </items>
             <point key="canvasLocation" x="124" y="97"/>
         </menu>
-        <window title="AppDeploy" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="371" customClass="MainNSWindow">
-            <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="500" width="500" height="476"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
-            <value key="minSize" type="size" width="500" height="476"/>
-            <value key="maxSize" type="size" width="500" height="476"/>
-            <view key="contentView" id="372" userLabel="Main View">
-                <rect key="frame" x="0.0" y="0.0" width="500" height="476"/>
-                <autoresizingMask key="autoresizingMask"/>
-            </view>
-            <connections>
-                <outlet property="appBundleId" destination="0dj-zq-Esn" id="Lyz-xX-n2T"/>
-                <outlet property="appName" destination="IA6-sn-5VO" id="jjb-KA-jQr"/>
-                <outlet property="appUrlCopyItem" destination="197" id="IWH-Bf-YhS"/>
-                <outlet property="appUrlPreviewButton" destination="KDK-W9-8w7" id="9iG-mv-Hva"/>
-                <outlet property="buildStatusImagePublish" destination="G27-SP-y1C" id="VHB-5j-uP5"/>
-                <outlet property="buildStatusImageTemplate" destination="bRv-iq-exV" id="sGA-k9-nx4"/>
-                <outlet property="buildURLTextField" destination="Opx-UL-C7B" id="pDX-qD-mLp"/>
-                <outlet property="cleanAfterBuildButton" destination="lkV-HZ-ng3" id="9dd-hx-gZa"/>
-                <outlet property="creationDate" destination="cNm-m2-YaX" id="bPy-vo-Pqf"/>
-                <outlet property="displayInformationItem" destination="297" id="tsg-SI-hhn"/>
-                <outlet property="dragImage" destination="BUf-ju-2ec" id="Y7M-JW-hCA"/>
-                <outlet property="dragView" destination="8fA-mu-v11" id="tFA-O1-781"/>
-                <outlet property="fullscreenWaitingIndicator" destination="bSP-uQ-w31" id="ax3-zl-ibM"/>
-                <outlet property="fullscreenWaitingView" destination="KkR-6k-LBA" id="ub8-ps-f7j"/>
-                <outlet property="generateDeployItem" destination="bVs-vi-K3T" id="IOw-Qz-aoz"/>
-                <outlet property="generateTemplateItem" destination="98e-vR-h1D" id="nui-e8-JDi"/>
-                <outlet property="generateTemplateWithoutBinaryItem" destination="MAV-xQ-Q7e" id="Nz8-4R-4h1"/>
-                <outlet property="goToWebpageItem" destination="ESF-dN-kWW" id="FsC-vd-v6Q"/>
-                <outlet property="icone" destination="J4Y-gs-PAz" id="ppg-f5-pkZ"/>
-                <outlet property="infoAppView" destination="TQT-V5-3Px" id="Xqc-nD-xRC"/>
-                <outlet property="mainView" destination="372" id="iCY-wv-2Vc"/>
-                <outlet property="openBuildButton" destination="4Qc-uY-dZg" id="Qsd-yC-foF"/>
-                <outlet property="openCustomOutputFolderItem" destination="EMu-pZ-EcU" id="Ndg-pE-PAt"/>
-                <outlet property="openOutputFolderItem" destination="juU-3e-pdL" id="hay-hw-Ok6"/>
-                <outlet property="previewButton" destination="28M-QP-hXq" id="vEq-E9-i00"/>
-                <outlet property="provisioningButton" destination="xQ8-WV-PEp" id="fGt-cA-9TC"/>
-                <outlet property="provisionningExpirationDate" destination="wwB-ca-cQr" id="Ypc-LL-GSw"/>
-                <outlet property="provisionningTextField" destination="AkK-kN-EIb" id="M4J-VK-sja"/>
-                <outlet property="serverConfigPopupButton" destination="gLc-Vb-XRr" id="Sa9-4m-fxT"/>
-                <outlet property="showFileInFinder" destination="ReC-pD-l64" id="JYc-Ct-lAw"/>
-                <outlet property="showMobileProvisoningItem" destination="1MZ-7d-qDU" id="MMD-Ln-n5y"/>
-                <outlet property="showPlistItem" destination="4IK-iJ-RiV" id="nsO-cM-44X"/>
-                <outlet property="signPublishButton" destination="hxc-aN-PfD" id="MNi-JC-NRv"/>
-                <outlet property="signingIdentity" destination="Fxd-f4-Zla" id="qP5-HZ-8cb"/>
-                <outlet property="sourceFileSize" destination="bhI-jc-ujt" id="htL-bV-W36"/>
-                <outlet property="technicalDetail" destination="qdP-0n-dsY" id="GGm-DL-mcn"/>
-                <outlet property="templateButton" destination="wrw-cv-Q1x" id="adM-o9-53o"/>
-                <outlet property="templatePopupButton" destination="5ci-OI-Iek" id="Bpm-LH-11x"/>
-                <outlet property="uploadProgessIndicator" destination="tuw-fh-0jl" id="2n8-pk-SRH"/>
-                <outlet property="wheelIndicatorPublish" destination="Es4-7a-sK7" id="D9f-E5-GAN"/>
-                <outlet property="wheelIndicatorTemplate" destination="v8x-mU-Mud" id="Hui-cI-gs5"/>
-            </connections>
-            <point key="canvasLocation" x="134" y="-228"/>
-        </window>
         <customView misplaced="YES" id="KkR-6k-LBA" userLabel="Waiting view fullscreen" customClass="BackgroundView">
             <rect key="frame" x="0.0" y="0.0" width="500" height="476"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -357,17 +404,11 @@
             </subviews>
             <point key="canvasLocation" x="891" y="606"/>
         </customView>
-        <customObject id="494" customClass="AppDelegate">
-            <connections>
-                <outlet property="window" destination="371" id="532"/>
-            </connections>
-        </customObject>
-        <customObject id="420" customClass="NSFontManager"/>
         <customView misplaced="YES" id="TQT-V5-3Px" userLabel="Info App">
             <rect key="frame" x="0.0" y="0.0" width="500" height="476"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="IA6-sn-5VO">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" id="IA6-sn-5VO">
                     <rect key="frame" x="0.0" y="453" width="454" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="AppName - 1.0 (23)" id="C6i-VZ-bko">
@@ -411,18 +452,7 @@ Gw
                         <action selector="showMobileprovision:" target="371" id="24J-2t-tyO"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" misplaced="YES" id="hxc-aN-PfD">
-                    <rect key="frame" x="102" y="43" width="356" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Generate &amp; publish" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3SR-sw-IKr">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="signAndPush:" target="371" id="dSc-R3-mYM"/>
-                    </connections>
-                </button>
-                <textField verticalHuggingPriority="750" misplaced="YES" id="AkK-kN-EIb" userLabel="Provisionning textfield">
+                <textField verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="AkK-kN-EIb" userLabel="Provisionning textfield">
                     <rect key="frame" x="106" y="256" width="348" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" alignment="left" placeholderString="Provisionning profil name" usesSingleLineMode="YES" id="wtg-Na-TIJ">
@@ -431,60 +461,10 @@ Gw
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField verticalHuggingPriority="750" misplaced="YES" id="Opx-UL-C7B" userLabel="Publishing textfield">
-                    <rect key="frame" x="108" y="73" width="344" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" placeholderString="http://yourserver.com/appname" id="443-Jc-Jx6">
-                        <font key="font" metaFont="cellTitle"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <box verticalHuggingPriority="750" misplaced="YES" boxType="separator" id="iAR-fZ-Gja">
-                    <rect key="frame" x="-5" y="225" width="505" height="5"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                </box>
-                <box verticalHuggingPriority="750" misplaced="YES" boxType="separator" id="Pkg-s0-1px">
-                    <rect key="frame" x="-3" y="14" width="505" height="5"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                </box>
                 <progressIndicator wantsLayer="YES" maxValue="110" style="bar" id="tuw-fh-0jl">
                     <rect key="frame" x="0.0" y="329" width="500" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </progressIndicator>
-                <button verticalHuggingPriority="750" misplaced="YES" id="4Qc-uY-dZg">
-                    <rect key="frame" x="346" y="150" width="112" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Open folder" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NAD-xA-iXv">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="openBuildFolder:" target="371" id="crW-Bb-4fs"/>
-                    </connections>
-                </button>
-                <button verticalHuggingPriority="750" misplaced="YES" id="wrw-cv-Q1x">
-                    <rect key="frame" x="102" y="150" width="130" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6TE-Yj-7O0">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="signAndTemplate:" target="371" id="avy-fS-vYk"/>
-                    </connections>
-                </button>
-                <button misplaced="YES" id="lkV-HZ-ng3">
-                    <rect key="frame" x="104" y="25" width="297" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" title="Automatically delete build folder in case of successfull upload" bezelStyle="regularSquare" imagePosition="left" controlSize="mini" inset="2" id="5As-Ku-yy5">
-                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="miniSystem"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="clickDeleteBuildButton:" target="371" id="NUE-6p-atN"/>
-                    </connections>
-                </button>
                 <button id="CyX-5b-Ux9">
                     <rect key="frame" x="49" y="452" width="397" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -496,18 +476,7 @@ Gw
                         <action selector="moreAboutApp:" target="371" id="nLA-oe-7pw"/>
                     </connections>
                 </button>
-                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" id="KDK-W9-8w7">
-                    <rect key="frame" x="466" y="78" width="14" height="12"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="Play" imagePosition="above" alignment="left" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="xBc-0H-LdC">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="openUrl:" target="371" id="A2c-zs-jsh"/>
-                    </connections>
-                </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="0dj-zq-Esn">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" id="0dj-zq-Esn">
                     <rect key="frame" x="104" y="422" width="344" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="BundleId" id="Jts-Yt-5uv">
@@ -516,7 +485,7 @@ Gw
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="bhI-jc-ujt">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" id="bhI-jc-ujt">
                     <rect key="frame" x="104" y="399" width="344" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="FileSize" id="pLf-YS-61f">
@@ -525,7 +494,7 @@ Gw
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="cNm-m2-YaX">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" id="cNm-m2-YaX">
                     <rect key="frame" x="104" y="376" width="204" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" title="Creation Date" id="dSE-FW-Zo7">
@@ -534,7 +503,7 @@ Gw
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="qdP-0n-dsY">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" id="qdP-0n-dsY">
                     <rect key="frame" x="104" y="338" width="255" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" id="qea-7G-i0A">
@@ -545,8 +514,128 @@ Gw
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="DLG-Ij-Cai">
-                    <rect key="frame" x="13" y="106" width="70" height="17"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="143-p9-LPW">
+                    <rect key="frame" x="12" y="313" width="140" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="  🔧 Signature &amp; profil" id="6Ki-wD-9Kv">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="Fxd-f4-Zla">
+                    <rect key="frame" x="106" y="286" width="381" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" placeholderString="Signing Identity iPhoneDeveloper : XXXX YYYY (XXXXXXXXXX)" usesSingleLineMode="YES" id="yhe-ph-2xS">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="wwB-ca-cQr" userLabel="Provisionning textfield">
+                    <rect key="frame" x="106" y="232" width="348" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" alignment="left" placeholderString="Expiration date" usesSingleLineMode="YES" id="GbE-qo-vzU">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" misplaced="YES" boxType="separator" id="Wgo-kH-QyK">
+                    <rect key="frame" x="-2" y="219" width="505" height="5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </box>
+            </subviews>
+            <point key="canvasLocation" x="732" y="1583"/>
+        </customView>
+        <customObject id="494" customClass="AppDelegate">
+            <connections>
+                <outlet property="window" destination="371" id="532"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+        <customObject id="hTt-ZE-Xzc" customClass="SUUpdater"/>
+        <userDefaultsController representsSharedInstance="YES" id="V2P-Ki-L5L"/>
+        <viewController id="ylA-x1-GFT">
+            <view key="view" id="jne-7t-NaT">
+                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+        </viewController>
+        <customView misplaced="YES" id="qc0-cA-3cO" userLabel="Template">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="476"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" misplaced="YES" id="hxc-aN-PfD">
+                    <rect key="frame" x="105" y="37" width="356" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Generate &amp; publish" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3SR-sw-IKr">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="signAndPush:" target="371" id="dSc-R3-mYM"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="Opx-UL-C7B" userLabel="Publishing textfield">
+                    <rect key="frame" x="111" y="67" width="344" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" placeholderString="http://yourserver.com/appname" id="443-Jc-Jx6">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" misplaced="YES" boxType="separator" id="Pkg-s0-1px">
+                    <rect key="frame" x="0.0" y="8" width="505" height="5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </box>
+                <button verticalHuggingPriority="750" misplaced="YES" id="4Qc-uY-dZg">
+                    <rect key="frame" x="349" y="144" width="112" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Open folder" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NAD-xA-iXv">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="openBuildFolder:" target="371" id="crW-Bb-4fs"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="wrw-cv-Q1x">
+                    <rect key="frame" x="105" y="144" width="130" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Generate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6TE-Yj-7O0">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="signAndTemplate:" target="371" id="avy-fS-vYk"/>
+                    </connections>
+                </button>
+                <button misplaced="YES" id="lkV-HZ-ng3">
+                    <rect key="frame" x="107" y="19" width="297" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Automatically delete build folder in case of successfull upload" bezelStyle="regularSquare" imagePosition="left" controlSize="mini" inset="2" id="5As-Ku-yy5">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="clickDeleteBuildButton:" target="371" id="NUE-6p-atN"/>
+                    </connections>
+                </button>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" id="KDK-W9-8w7">
+                    <rect key="frame" x="469" y="72" width="14" height="12"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="Play" imagePosition="above" alignment="left" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="xBc-0H-LdC">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="openUrl:" target="371" id="A2c-zs-jsh"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="DLG-Ij-Cai">
+                    <rect key="frame" x="16" y="100" width="70" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=" ☁️ Server" id="m9e-uA-jxj">
                         <font key="font" metaFont="system"/>
@@ -554,8 +643,8 @@ Gw
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="MWr-a0-jeN">
-                    <rect key="frame" x="13" y="197" width="86" height="17"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="MWr-a0-jeN">
+                    <rect key="frame" x="16" y="191" width="86" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=" 🎨 Template" id="iCM-Tv-XPO">
                         <font key="font" metaFont="system"/>
@@ -564,7 +653,7 @@ Gw
                     </textFieldCell>
                 </textField>
                 <popUpButton verticalHuggingPriority="750" misplaced="YES" id="5ci-OI-Iek">
-                    <rect key="frame" x="106" y="189" width="349" height="26"/>
+                    <rect key="frame" x="109" y="183" width="349" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <popUpButtonCell key="cell" type="push" title="Default" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="3DB-cR-aZP" id="qgv-6l-GWX">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -580,7 +669,7 @@ Gw
                     </connections>
                 </popUpButton>
                 <popUpButton verticalHuggingPriority="750" misplaced="YES" id="B4i-es-Gj3">
-                    <rect key="frame" x="106" y="101" width="349" height="26"/>
+                    <rect key="frame" x="109" y="95" width="349" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <popUpButtonCell key="cell" type="push" title="Beta configuration" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="elv-23-Rlz" id="gLc-Vb-XRr">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -603,51 +692,33 @@ Gw
                     </connections>
                 </popUpButton>
                 <box verticalHuggingPriority="750" misplaced="YES" boxType="separator" id="1z8-Yq-tTm">
-                    <rect key="frame" x="2" y="140" width="505" height="5"/>
+                    <rect key="frame" x="4" y="134" width="505" height="5"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="G27-SP-y1C" userLabel="Error status">
-                    <rect key="frame" x="458" y="50" width="34" height="21"/>
+                    <rect key="frame" x="461" y="44" width="34" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="CheckmarkGreen" id="OFT-gt-iB2"/>
                     <accessibility description="Check for generation"/>
                 </imageView>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="143-p9-LPW">
-                    <rect key="frame" x="12" y="313" width="140" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="  🔧 Signature &amp; profil" id="6Ki-wD-9Kv">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="Fxd-f4-Zla">
-                    <rect key="frame" x="106" y="286" width="381" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" placeholderString="Signing Identity iPhoneDeveloper : XXXX YYYY (XXXXXXXXXX)" usesSingleLineMode="YES" id="yhe-ph-2xS">
-                        <font key="font" metaFont="cellTitle"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="v8x-mU-Mud">
-                    <rect key="frame" x="467" y="160" width="16" height="16"/>
+                    <rect key="frame" x="470" y="154" width="16" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <accessibility description="Wheel template"/>
                 </progressIndicator>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="bRv-iq-exV" userLabel="Error status">
-                    <rect key="frame" x="458" y="157" width="34" height="21"/>
+                    <rect key="frame" x="461" y="151" width="34" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="CheckmarkGreen" id="cS0-H1-qJd"/>
                     <accessibility description="Check for template generation"/>
                 </imageView>
                 <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="Es4-7a-sK7">
-                    <rect key="frame" x="467" y="53" width="16" height="16"/>
+                    <rect key="frame" x="470" y="47" width="16" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <accessibility description="Wheel publish"/>
                 </progressIndicator>
                 <button verticalHuggingPriority="750" misplaced="YES" id="28M-QP-hXq">
-                    <rect key="frame" x="227" y="150" width="124" height="32"/>
+                    <rect key="frame" x="230" y="144" width="124" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Open template" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Lyv-uJ-IrW">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -660,69 +731,33 @@ IA
                         <action selector="previewTemplateAction:" target="371" id="xW7-rx-Jmu"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" misplaced="YES" id="wwB-ca-cQr" userLabel="Provisionning textfield">
-                    <rect key="frame" x="106" y="232" width="348" height="22"/>
+                <box verticalHuggingPriority="750" misplaced="YES" boxType="separator" id="gAY-Xb-Vu8">
+                    <rect key="frame" x="1" y="220" width="505" height="5"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" alignment="left" placeholderString="Expiration date" usesSingleLineMode="YES" id="GbE-qo-vzU">
-                        <font key="font" metaFont="cellTitle"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
+                </box>
             </subviews>
-            <point key="canvasLocation" x="732" y="1583"/>
+            <point key="canvasLocation" x="1265" y="1583"/>
         </customView>
-        <customView misplaced="YES" id="8fA-mu-v11" userLabel="Drag View">
+        <customView id="68m-w7-w2E" userLabel="iOS-XcodeBottom">
             <rect key="frame" x="0.0" y="0.0" width="500" height="476"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <button verticalHuggingPriority="750" misplaced="YES" id="39o-Dk-UWa">
-                    <rect key="frame" x="157" y="13" width="186" height="32"/>
+                <box verticalHuggingPriority="750" misplaced="YES" boxType="separator" id="Hxq-tW-vu2">
+                    <rect key="frame" x="0.0" y="8" width="505" height="5"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Find last Xcode archive" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XXY-Pt-aTQ">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="findLastArchive:" target="371" id="znv-Rp-AnI"/>
-                    </connections>
-                </button>
-                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="jVm-Io-Tcc">
-                    <rect key="frame" x="43" y="84" width="414" height="27"/>
+                </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="TxC-aA-Mzv">
+                    <rect key="frame" x="18" y="113" width="463" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" selectable="YES" editable="YES" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="center" title="Drag an ipa, xcarchive or apk file to start." id="3Fz-eP-dNH">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="To access all the features, generate an ipa from Xcode (Organizer-&gt; Export)" id="XYA-jy-SWa">
+                        <font key="font" size="13" name=".SFNSText-Light"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <imageView id="BUf-ju-2ec">
-                    <rect key="frame" x="116" y="105" width="268" height="263"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="DragZone" id="I8E-PM-JDD"/>
-                </imageView>
-                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" id="FUx-Rc-YO9">
-                    <rect key="frame" x="457" y="17" width="25" height="25"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HFX-RG-pWp">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="help:" target="371" id="lRp-wZ-6NK"/>
-                    </connections>
-                </button>
             </subviews>
-            <point key="canvasLocation" x="204" y="606"/>
+            <point key="canvasLocation" x="1801" y="1583"/>
         </customView>
-        <customObject id="hTt-ZE-Xzc" customClass="SUUpdater"/>
-        <userDefaultsController representsSharedInstance="YES" id="V2P-Ki-L5L"/>
-        <viewController id="ylA-x1-GFT">
-            <view key="view" id="jne-7t-NaT">
-                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                <autoresizingMask key="autoresizingMask"/>
-            </view>
-        </viewController>
     </objects>
     <resources>
         <image name="CheckmarkGreen" width="256" height="256"/>

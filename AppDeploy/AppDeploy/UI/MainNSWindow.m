@@ -37,6 +37,8 @@ typedef enum {
 @property (strong) IBOutlet NSView *mainView;
 @property (strong) IBOutlet NSView *dragView;
 @property (strong) IBOutlet BackgroundView *fullscreenWaitingView;
+@property (weak) IBOutlet NSView *templateServerView;
+@property (weak) IBOutlet NSView *xcarchiveBottomView;
 
 //Home
 @property (weak) IBOutlet NSImageView *dragImage;
@@ -95,11 +97,6 @@ typedef enum {
 //Waiting view fullscreen
 @property (weak) IBOutlet NSProgressIndicator *fullscreenWaitingIndicator;
 @property (strong)  PreferencesWindowController *preferencesWindowController;
-
-//UI
-@property (weak) IBOutlet NSTextField *templateTitle;
-@property (weak) IBOutlet NSTextField *serverTitle;
-@property (weak) IBOutlet NSView *serverSeparator;
 
 @end
 
@@ -820,13 +817,15 @@ typedef enum {
 }
 
 - (void) updateUIWithKeyPressedWithApplication:(ABApplication*)application {
-	
+
 	if (application == nil) return;
     self.provisionningTextField.stringValue = @"";
     self.provisionningExpirationDate.stringValue = @"";
     self.signingIdentity.stringValue = @"";
     self.provisioningButton.hidden = YES;
     self.appBundleId.hidden = YES;
+    self.templateServerView.hidden = (application.type == ApplicationTypeIOS && application.archive);
+    self.xcarchiveBottomView.hidden = !(application.type == ApplicationTypeIOS && application.archive);
 
     //COMMUN
     if (!IsEmpty(application.bundleIdentifier)) {
@@ -878,50 +877,6 @@ typedef enum {
     if (application.type == ApplicationTypeIOS && application.archive) {
         self.technicalDetail.hidden = NO;
         self.technicalDetail.stringValue = [NSString stringWithFormat:@"SDK: %@ Minimum: %@",application.sdk, application.minimumOS];
-        
-        self.templateButton.hidden = YES;
-        self.signPublishButton.hidden = YES;
-        self.templateButton.hidden = YES;
-        self.openBuildButton.hidden = YES;
-        self.templatePopupButton.hidden = YES;
-        self.cleanAfterBuildButton.hidden = YES;
-        self.appUrlPreviewButton.hidden = YES;
-        self.buildURLTextField.hidden = YES;
-        self.configurationPopUpButton.hidden = YES;
-        self.buildURLTextField.hidden = YES;
-        self.previewButton.hidden = YES;
-        self.templateTitle.hidden = YES;
-        self.serverTitle.hidden = YES;
-        self.serverSeparator.hidden = YES;
-/*
-      NSImageView *icone;
-      NSTextField *appName;
-      NSTextField *appBundleId;
-      NSTextField *signingIdentity;
-      NSTextField *provisionningTextField;
-      NSTextField *provisionningExpirationDate;
-      NSTextField *buildURLTextField;
-      NSProgressIndicator *wheelIndicatorPublish;
-      NSImageView *buildStatusImagePublish;
-      NSProgressIndicator *wheelIndicatorTemplate;
-      NSImageView *buildStatusImageTemplate;
-      NSButton *templateButton;
-      NSButton *openBuildButton;
-      NSButton *previewButton;
-      NSButton *signPublishButton;
-      NSProgressIndicator *uploadProgessIndicator;
-      NSTextField *sourceFileSize;
-      NSTextField *creationDate;
-      NSButton *provisioningButton;
-      NSScrollView *commentContainer;
-      NSView *commentView;
-      NSTextField *technicalDetail;
-      NSPopUpButton *templatePopupButton;
-      NSPopUpButtonCell *serverConfigPopupButton;
-      NSButton *cleanAfterBuildButton;
-      NSButton *appUrlPreviewButton;
-        */
-        
         
         /*
         self.templateButton.title = @"Sign & Template";
@@ -1071,10 +1026,14 @@ typedef enum {
 	[self.dragView removeFromSuperview];
 	[self.infoAppView removeFromSuperview];//protection
 	[self.mainView addSubview:self.infoAppView];
+    [self.mainView addSubview:self.templateServerView];
+    [self.mainView addSubview:self.xcarchiveBottomView];
 }
 
 - (void) displayDragView {
-	[self.infoAppView removeFromSuperview];
+    [self.infoAppView removeFromSuperview];
+    [self.templateServerView removeFromSuperview];
+    [self.xcarchiveBottomView removeFromSuperview];
 	[self.mainView addSubview:self.dragView];
 }
 
