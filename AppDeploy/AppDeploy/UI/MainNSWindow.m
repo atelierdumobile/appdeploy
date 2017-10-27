@@ -69,6 +69,8 @@ typedef enum {
 @property (weak) IBOutlet NSPopUpButtonCell *serverConfigPopupButton;
 @property (weak) IBOutlet NSButton *cleanAfterBuildButton;
 @property (weak) IBOutlet NSButton *appUrlPreviewButton;
+@property (weak) IBOutlet NSPopUpButton *configurationPopUpButton;
+
 
 //Menu
 @property (weak) IBOutlet NSMenuItem *openOutputFolderItem;
@@ -94,6 +96,10 @@ typedef enum {
 @property (weak) IBOutlet NSProgressIndicator *fullscreenWaitingIndicator;
 @property (strong)  PreferencesWindowController *preferencesWindowController;
 
+//UI
+@property (weak) IBOutlet NSTextField *templateTitle;
+@property (weak) IBOutlet NSTextField *serverTitle;
+@property (weak) IBOutlet NSView *serverSeparator;
 
 @end
 
@@ -872,6 +878,52 @@ typedef enum {
     if (application.type == ApplicationTypeIOS && application.archive) {
         self.technicalDetail.hidden = NO;
         self.technicalDetail.stringValue = [NSString stringWithFormat:@"SDK: %@ Minimum: %@",application.sdk, application.minimumOS];
+        
+        self.templateButton.hidden = YES;
+        self.signPublishButton.hidden = YES;
+        self.templateButton.hidden = YES;
+        self.openBuildButton.hidden = YES;
+        self.templatePopupButton.hidden = YES;
+        self.cleanAfterBuildButton.hidden = YES;
+        self.appUrlPreviewButton.hidden = YES;
+        self.buildURLTextField.hidden = YES;
+        self.configurationPopUpButton.hidden = YES;
+        self.buildURLTextField.hidden = YES;
+        self.previewButton.hidden = YES;
+        self.templateTitle.hidden = YES;
+        self.serverTitle.hidden = YES;
+        self.serverSeparator.hidden = YES;
+/*
+      NSImageView *icone;
+      NSTextField *appName;
+      NSTextField *appBundleId;
+      NSTextField *signingIdentity;
+      NSTextField *provisionningTextField;
+      NSTextField *provisionningExpirationDate;
+      NSTextField *buildURLTextField;
+      NSProgressIndicator *wheelIndicatorPublish;
+      NSImageView *buildStatusImagePublish;
+      NSProgressIndicator *wheelIndicatorTemplate;
+      NSImageView *buildStatusImageTemplate;
+      NSButton *templateButton;
+      NSButton *openBuildButton;
+      NSButton *previewButton;
+      NSButton *signPublishButton;
+      NSProgressIndicator *uploadProgessIndicator;
+      NSTextField *sourceFileSize;
+      NSTextField *creationDate;
+      NSButton *provisioningButton;
+      NSScrollView *commentContainer;
+      NSView *commentView;
+      NSTextField *technicalDetail;
+      NSPopUpButton *templatePopupButton;
+      NSPopUpButtonCell *serverConfigPopupButton;
+      NSButton *cleanAfterBuildButton;
+      NSButton *appUrlPreviewButton;
+        */
+        
+        
+        /*
         self.templateButton.title = @"Sign & Template";
         if (self.altKeyDown && [application templateRetransferable]) {
             self.signPublishButton.title = @"(Re-)Publish";
@@ -879,6 +931,7 @@ typedef enum {
         else {
             self.signPublishButton.title = @"Sign & Template & Publish";
         }
+         */
     }
     else {
         self.templateButton.title = @"Template";
