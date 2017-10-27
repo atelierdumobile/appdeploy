@@ -7,6 +7,7 @@ ChangeLog
 ==========
 #4.5/54
 - Compatibility with Xcode 9
+- In the setting, improve the SFTP test by checking the presence of the root path
 - Disable the xcharchive build feature
 
 #4.4/53
