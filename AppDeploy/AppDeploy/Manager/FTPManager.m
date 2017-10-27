@@ -363,6 +363,7 @@
 - (SFTPConnectionStatus) testConnectionWithServer:(NSString*)server
 										  ftpUser:(NSString*)user
 										  ftpPass:(NSString*)pass
+                                         rootPath:(NSString*)rootPath
 											error:(NSString**)outputError {	
 	NSString * outputString = nil;
 	
@@ -405,6 +406,7 @@
 		result = [self testConnectionNMSSHWithServer:server
 															  ftpUser:user
 															  ftpPass:pass
+                                                           rootPath:rootPath
 																error:outputError];
 		LoggerNetwork(1, @"Result connection SFTPConnectionStatus=%ld - outputError=%@", result, *outputError);
 	}
@@ -416,6 +418,7 @@
 - (SFTPConnectionStatus) testConnectionNMSSHWithServer:(NSString*)server
 											   ftpUser:(NSString*)user
 											   ftpPass:(NSString*)pass
+                                              rootPath:(NSString*)rootPath
 												 error:(NSString**)errorString {
 	
 	SFTPConnectionStatus connectionStatus = SFTPOtherError;
@@ -457,6 +460,22 @@
 		else {
 			LoggerError(0,@"Authentication failure. Last error:%@",session.lastError);
 		}
+        
+        //Check the existance of the folder
+        BOOL isDirectoryFound = NO;
+        NMSFTP * nmsftp = [NMSFTP connectWithSession:session];
+        if (nmsftp !=nil && !IsEmpty(rootPath)) {
+             isDirectoryFound = [nmsftp directoryExistsAtPath:rootPath];
+          
+        }
+        if (nmsftp ==nil || !isDirectoryFound) {
+            LoggerData(0, @"Root path not found %@", rootPath);
+            connectionStatus = SFTPPathNotFound;
+            return connectionStatus;
+        }
+        //TODO: check file write permissions drwxr-xr-x
+        //NMSFTPFile * folderInfo = [nmsftp infoForFileAtPath:rootPath];
+        //folderInfo.permissions;
 	}
 	@catch(NSException* ex) {
 		LoggerError(0, @"FTP exception %@", ex);

@@ -29,14 +29,16 @@
 - (void)testOVHConnection {
 	NSString * SERVER = kFTPServer;
 	NSString * USER = kFTPUser;
-	NSString * PWD = kFTPPassword;
-	
+    NSString * PWD = kFTPPassword;
+    NSString * ROOT_PATH = kFTPDestination;
+
 	FTPManager * ssh = [[FTPManager alloc]init] ;
 	NSString * outputError;
 
 	SFTPConnectionStatus result = [ssh testConnectionWithServer:SERVER
 										ftpUser:USER
 										ftpPass:PWD
+                                       rootPath:ROOT_PATH
 										  error:&outputError];
 	
 	XCTAssertTrue(result != SFTPConnectionSuccess,@"Couln't connect to %@", SERVER);
@@ -46,11 +48,13 @@
 	NSString * SERVER = kICServer;
 	NSString * USER = kICUser;
 	NSString * PWD = kICPassword;
-	
+    NSString * ROOT_PATH = kICDestination;
+
 	NSString * outputError;
 	BOOL result = [[[FTPManager alloc]init ] testConnectionWithServer:SERVER
 															  ftpUser:USER
 															  ftpPass:PWD
+                                                             rootPath:ROOT_PATH
 																error:&outputError];
 	
 	XCTAssertTrue(result != SFTPConnectionSuccess,@"Couln't connect to %@", SERVER);

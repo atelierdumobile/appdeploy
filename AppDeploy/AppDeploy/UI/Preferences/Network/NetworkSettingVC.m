@@ -414,8 +414,9 @@
 	ServerModel * serverConfig = [self currentServerConfiguration];
 	NSString * server = serverConfig.server;
 	NSString * login = serverConfig.username;
-	NSString * pwd = serverConfig.password;
-	
+    NSString * pwd = serverConfig.password;
+    NSString * rootFolder = serverConfig.remotePath;
+
 	
 	if (!IsEmpty(login) && !IsEmpty(server)) {
 		LoggerApp(1, @"Using network configuration");
@@ -426,9 +427,10 @@
 			result = [[[FTPManager alloc]init] testConnectionWithServer:server
 															 ftpUser:login
 															 ftpPass:pwd
+                                                             rootPath:rootFolder
 															   error:&errorString];
 			LoggerNetwork(1, @"Connexion test %@ with user %@  resultSuccessCode=%ld", server, login, result);
-	
+            BOOL isCheckingPath = serverConfig.type == ServerModelSFTP;
 			
 			[BBlock dispatchOnMainThread:^{
 				NSString * title = nil;
@@ -437,27 +439,36 @@
 				switch (result) {
 					case SFTPConnectionFailure:
                         [SoundHelper bipError];
-						title = @"Connection failure";
+						title = @"Connection failure 👎";
 						if (IsEmpty(message)) {
 							message = [NSString stringWithFormat:@"Couldn't connect to host %@", server];
 						}
 						break;
 					case SFTPAuthenticationFailure:
                         [SoundHelper bipError];
-						title = @"Authentication failure";
+						title = @"Authentication failure 👎";
 						if (IsEmpty(message)) {
 							message = @"Please check your login/pwd.";
 						}
 						break;
+                    case SFTPPathNotFound:
+                        title = @"Path failure 👎";
+                        message = @"Please check your path and that you have write access.";
+                        break;
 					case SFTPAuthenticationSuccess:
                     case SFTPConnectionSuccess:
                         [SoundHelper bip];
-						title = @"Connection success";
-						message = @"The authentication was successfull, be sure that the path provided is writable.";
+						title = @"Connection success 👍";
+                        if (isCheckingPath) {
+                            message = @"The authentication was successfull, and root directory exist. Be sure that the path provided is writable.";
+                        }
+                        else {
+                            message = @"The authentication was successfull, be sure that the path provided exist and is writable.";
+                        }
 						break;
 					default:
                         [SoundHelper bipError];
-						title = @"Connection failure";
+						title = @"Connection failure 👎";
 						if (IsEmpty(message)) {
 							message = @"Unkown error";
 						}

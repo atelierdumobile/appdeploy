@@ -9,7 +9,8 @@ typedef NS_ENUM(NSInteger,SFTPConnectionStatus) {
 	SFTPConnectionSuccess,
 	SFTPConnectionFailure,
  	SFTPAuthenticationSuccess,
-	SFTPAuthenticationFailure,
+    SFTPAuthenticationFailure,
+    SFTPPathNotFound,
 	SFTPCopySuccess,
 	SFTPCopyFailure,
  	SFTPOtherError
@@ -28,6 +29,7 @@ typedef NS_ENUM(NSInteger,SFTPConnectionStatus) {
 - (SFTPConnectionStatus) testConnectionWithServer:(NSString*)server
 										  ftpUser:(NSString*)user
 										  ftpPass:(NSString*)pass
+                                         rootPath:(NSString*)rootPath
 											error:(NSString**)outputError;
 
 - (void) stopTransfertAsync;
