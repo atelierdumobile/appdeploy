@@ -1,1 +1,1 @@
-../../../NSLogger/Client Logger/iOS/LoggerClient.h
+../../../NSLogger/Client/iOS/LoggerClient.h

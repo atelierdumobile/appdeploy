@@ -7,16 +7,16 @@ PODS:
   - BBlock/AppKit (1.2.1)
   - BBlock/Foundation (1.2.1)
   - CDEvents (1.2.2)
-  - Crashlytics (3.8.4):
-    - Fabric (~> 1.6.3)
-  - Fabric (1.6.11)
+  - Crashlytics (3.9.0):
+    - Fabric (~> 1.7.0)
+  - Fabric (1.7.1)
   - NMSSH (2.2.8)
-  - NSLogger (1.7.0):
-    - NSLogger/Standard (= 1.7.0)
-  - NSLogger/Standard (1.7.0)
+  - NSLogger (1.8.3):
+    - NSLogger/ObjC (= 1.8.3)
+  - NSLogger/ObjC (1.8.3)
   - RHPreferences (1.0.0)
   - SBYZipArchive (0.3.3)
-  - Sparkle (1.17.0)
+  - Sparkle (1.18.1)
 
 DEPENDENCIES:
   - BBlock
@@ -32,14 +32,14 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   BBlock: c56d7f72597ffe1634fcdc73836c5c0fed3271be
   CDEvents: f311f23de13414f4b3625f1a663b2e1d9a85d982
-  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
-  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  Crashlytics: 64aad5dd97249dd3ff94b979fea140144590cdd3
+  Fabric: c7cfc652f036180a72fe2539646c8a624420419d
   NMSSH: b722885a07485a2c03ffa3ea56a7b0308dbdc37c
-  NSLogger: daa17368272ddf10a0850c218fe49de23b50f2eb
+  NSLogger: c9b80dbeee1d65eb553647a1f6f1f72171b04808
   RHPreferences: 6871f9614347f4b45197c51f7c93c3cde2744ce8
   SBYZipArchive: 0bb14ce5294a41f0b4e4bb1015cebf66df9e31be
-  Sparkle: ccfb47699feea7b40b51cf3176f69404e5b1da6c
+  Sparkle: 06ea33170007c5937ee54da481b4481af98fac79
 
 PODFILE CHECKSUM: 596b19fb90ddf051adb5e2e07ffd4dea9f51e562
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1
