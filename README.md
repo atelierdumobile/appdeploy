@@ -13,7 +13,7 @@ AppDeploy is the fastest way to get info and deploy your mobile app Over The Air
 - [x] 🚨 iOS: Get notified when an xcarchive is built
 - [x] 🌅 Use default template (branded or with app icon) or customize your own one
 - [x] 🚀 Deploy to your server without extra configuration just html support is required
-- [x] 🎉 Notify build&deployment success with Hipchat or Prowl
+- [x] 🎉 Notify deployment success with Hipchat or Prowl
 - [x] 🚠 Integrate it in your Continuous Integration by using the command line
 - [x] 📲 Download the app with a versioned url
 
@@ -66,14 +66,6 @@ Display
 	- Nicer display among supported plateform
 	- MultiWindow support
 	- Add a comment section
-
-Signing (iOS)
-
-	- Xcarchive : Weakness of the signing part due to certificate issue and complexity of build. Not sure it is the role of this tool to handle it. Many different option possible.
-	- Display output of build/logs -> currently in the console
-	- Resiging by choosing a provisionning
-	- Upload Dsym
-	- Automatically delegate signing to Fastlane (gym) if present
 
 Network
 
